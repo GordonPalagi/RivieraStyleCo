@@ -1,0 +1,66 @@
+.footer-con {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    height: 60vh;
+    font-size: var(--fs-600);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    padding: 30px;
+}
+
+.tag-con {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    width: 100%;
+    height: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex: 1;
+}
+
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.understated {
+    font-size: var(--fs-400);
+    margin: 0;
+    font-weight: 300;
+}
+
+p {
+    font-size: var(--fs-400);
+    width: 70%;
+}
+
+li {
+    padding: 10px 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.icon-con {
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon {
+    padding: 10px 40px 10px 0px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: var(--clr-hover-800);
+    scale: 1.03;
+    text-decoration: underline;
+}
+

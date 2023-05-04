@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+
+:root {
+  --photoSize-800: 40vmax;
+  --photoSize-500: 30vmax;
+
+  --fs-xl: 4rem;
+  --fs-l: 2rem;
+  --fs-600: 1.25rem;
+  --fs-400: 1rem;
+
+  --fonfam-highlight: 'Allura', cursive;
+
+  --clr-hover-400: rgb(240, 205, 161);
+  --clr-hover-800: rgb(225, 165, 90);
+  --clr-neutral-900: hsl(0 0% 0%);
+  --clr-neutral-400: hsl(0 0% 40%);
+  --clr-neutral-100: hsl(0 0% 100%);
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}

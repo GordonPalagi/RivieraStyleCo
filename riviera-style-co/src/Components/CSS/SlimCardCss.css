@@ -1,0 +1,29 @@
+.slimCard-con {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--fonfam-highlight);
+    font-size: var(--fs-l);
+}
+
+.threeCardSlim {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonfam-highlight);
+    height: var(--photoSize-800);
+    font-size: var(--fs-l);
+    text-align: center;
+}
+
+.card-con {
+    padding: 2px;
+}
+
+.slimCard-photo {
+    display: flex;
+    height: var(--photoSize-500);
+}
+
+.card-con:hover {
+    text-decoration: underline;
+}

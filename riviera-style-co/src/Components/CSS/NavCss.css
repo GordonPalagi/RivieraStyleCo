@@ -1,0 +1,52 @@
+.banner-con {
+    display: flex;
+    position: sticky;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    flex-grow: 2;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: x-large;
+}
+
+.item {
+    padding: 2vw;
+    flex-grow: .5;
+    transition: .2s ease-in-out;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+.item:hover {
+    color: rgb(240, 205, 161);
+}
+
+.bannerAd {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    margin: 10px 0px;
+    font-size: large;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+}
+
+.adStyle {
+    padding-left: 30px;
+    font-size: xx-large;
+}
+
+.tag-con {
+    display: flex;
+    
+}
