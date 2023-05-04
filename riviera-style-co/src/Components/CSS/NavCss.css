@@ -9,6 +9,44 @@
     align-items: center;
 }
 
+img {
+    height: var(--photoSize-500);
+}
+
+
+.hovered-box-con {
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    top: 30px;
+    display: flex;
+    padding: 20px;
+}
+
+li {
+    flex-grow: 1;
+    list-style-type: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.li-con {
+    padding: 10px;
+}
+
+
+
 .title {
     flex-grow: 2;
     text-align: center;
@@ -22,6 +60,7 @@
     transition: .2s ease-in-out;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
+
 }
 
 .item:hover {
@@ -29,6 +68,7 @@
 }
 
 .bannerAd {
+    position: relative;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -39,6 +79,7 @@
     font-size: large;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
+    z-index: -1;
 }
 
 .adStyle {
