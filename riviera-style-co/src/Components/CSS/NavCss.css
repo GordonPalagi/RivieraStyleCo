@@ -1,6 +1,5 @@
 .banner-con {
     display: flex;
-    position: sticky;
     width: 100%;
     justify-content: flex-start;
     padding: 1vw;
@@ -9,7 +8,18 @@
     align-items: center;
 }
 
-img {
+.title-wheel {
+    height: var(--photoSize-200);
+}
+
+.title-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.banner-img {
     height: var(--photoSize-500);
 }
 
@@ -19,15 +29,20 @@ img {
     z-index: 2;
     position: absolute;
     height: fit-content;
-    width: fit-content;
-    top: 30px;
-    display: flex;
+    width: 80vmax;
+    top: -110px;
+    margin: auto 0;
+    display: inline-flex;
+    justify-content: space-around;
     padding: 20px;
 }
 
 li {
     flex-grow: 1;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title {
@@ -39,6 +54,7 @@ li {
     position: relative;
     display: flex;
     justify-content: center;
+
 }
 
 .li-con {
@@ -48,7 +64,6 @@ li {
 
 
 .title {
-    flex-grow: 2;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: x-large;
@@ -56,11 +71,10 @@ li {
 
 .item {
     padding: 2vw;
-    flex-grow: .5;
     transition: .2s ease-in-out;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
-
+    flex-grow: 1;
 }
 
 .item:hover {
@@ -72,14 +86,20 @@ li {
     height: 10vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
     margin: 10px 0px;
     font-size: large;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    z-index: -1;
+    background: rgb(177,255,170);
+    background: linear-gradient(167deg, rgba(177,255,170,1) 0%, rgba(255,255,170,1) 42%, rgba(255,255,170,1) 48%, rgba(195,198,230,1) 74%, rgba(170,174,255,1) 96%);
+}
+
+.close {
+    display: flex;
+    cursor: pointer;
+
 }
 
 .adStyle {

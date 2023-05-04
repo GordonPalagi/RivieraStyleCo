@@ -1,0 +1,40 @@
+.hero-con {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7rem;
+    font-family: var(--fonfam-highlight);
+    z-index: 2;
+}
+
+.hero-img {
+    z-index: 0;
+    filter: blur(2px);
+    filter: brightness(40%);
+}
+
+.wheel-con {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wheel {
+    height: var(--photoSize-500);
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    filter:contrast(5%)
+}

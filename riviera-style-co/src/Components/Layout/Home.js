@@ -8,6 +8,7 @@ import HeroCard from '../Models/HeroCard'
 import SlimCard from '../Models/SlimCard'
 import CatagorieData from '../Data/CatagorieData'
 import blockCardData from '../Data/blockCardData'
+import HeroPoster from '../Models/HeroPoster'
 
 function Home() {
 
@@ -17,6 +18,7 @@ function Home() {
 
   return (
     <>
+      <HeroPoster title={"Riviera Style Co."}/>
       <HeroCard 
           className='upper-hero' 
           title={title} 

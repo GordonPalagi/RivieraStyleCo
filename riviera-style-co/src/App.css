@@ -3,9 +3,12 @@
 
 
 :root {
+  --photoSize-1000: 50vmax;
   --photoSize-800: 40vmax;
   --photoSize-500: 30vmax;
+  --photoSize-200: 4vmax;
 
+  --fs-xxl: 6rem;
   --fs-xl: 4rem;
   --fs-l: 2rem;
   --fs-600: 1.25rem;
