@@ -24,17 +24,28 @@
 }
 
 
+.hover-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
 .hovered-box-con {
     background-color: white;
     z-index: 2;
     position: absolute;
     height: fit-content;
     width: 80vmax;
-    top: -110px;
+    /* top: -110px; */
     margin: auto 0;
     display: inline-flex;
     justify-content: space-around;
     padding: 20px;
+}
+
+.li-con {
+    padding: 10px;
 }
 
 li {
@@ -48,17 +59,6 @@ li {
 .title {
     display: flex;
     flex-direction: column;
-}
-
-.hover-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-}
-
-.li-con {
-    padding: 10px;
 }
 
 
@@ -94,6 +94,7 @@ li {
     font-family: 'Raleway', sans-serif;
     background: rgb(177,255,170);
     background: linear-gradient(167deg, rgba(177,255,170,1) 0%, rgba(255,255,170,1) 42%, rgba(255,255,170,1) 48%, rgba(195,198,230,1) 74%, rgba(170,174,255,1) 96%);
+    z-index: 1;
 }
 
 .close {
