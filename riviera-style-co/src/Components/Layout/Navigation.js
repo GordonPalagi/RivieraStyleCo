@@ -11,14 +11,9 @@ import NavDropdown from '../Models/NavDropdown';
 function Navigation() {
 
     const [hoveredLink, setHoveredLink] = useState(null);
-    // closes bannerAd
     const [close, setClose] = useState(true);
-
     
-    // sets index for each navlink and lets us 
-    // reveal the extra links in the popup
     const handleMouseOver = (index) => {
-
       setHoveredLink(index);
     };
 
@@ -59,6 +54,7 @@ function Navigation() {
       <>
         <Banner title={"Riviera Style Co."}/>
         {close && <AdBar onClick={handleClick}/>}
+
         {hoveredLink !== null ? (
           <div onMouseLeave={handleMouseLeave}>
             <NavDropdown 
@@ -67,6 +63,7 @@ function Navigation() {
             />
           </div>
         ) : null}
+
       </>
     )
   }
