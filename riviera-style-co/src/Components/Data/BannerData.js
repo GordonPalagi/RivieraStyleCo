@@ -1,22 +1,7 @@
-// export default
-// [
-//       {
-//         title: "Womens",
-//         links: ["Dresses", "Tops", "Bottoms"],
-//       },
-//       {
-//         title: "Mens",
-//         links: ["Shirts", "Pants", "Shoes"],
-//       },
-//       {
-//         title: "Shoes",
-//         links: ["Sneakers", "Boots", "Sandals"],
-//       },
-//       {
-//         title: "Accessories",
-//         links: ["Jewelry", "Hats", "Scarves"],
-//       },
-// ];
+import Dresses from '../Images/Dresses.avif';
+import fallClothes from '../Images/fallClothes.avif';
+import Jackets from '../Images/Jackets.avif';
+
 
 export default 
 [  
@@ -27,6 +12,7 @@ export default
         "Discover the latest tops to elevate your style",
         "Shop our collection of comfortable and stylish bottoms",    
     ],
+    photos: [Dresses, fallClothes, Jackets]
   },
   {
     title: "Men's",
@@ -35,6 +21,7 @@ export default
       "Find the perfect pair of pants for any occasion",
       "Step out in style with our collection of shoes",
     ],
+    photos: [Dresses, fallClothes, Jackets]
   },
   {
     title: "Shoes",
@@ -43,6 +30,7 @@ export default
       "Stay stylish and comfortable with our range of boots",
       "Step out in style and comfort with our collection of sandals",
     ],
+    photos: [Dresses, fallClothes, Jackets]
   },
   {
     title: "Accessories",
@@ -51,5 +39,7 @@ export default
       "Complete your look with our collection of hats",
       "Stay cozy and stylish with our selection of scarves",
     ],
+    photos: [Dresses, fallClothes, Jackets]
   },
 ];
+

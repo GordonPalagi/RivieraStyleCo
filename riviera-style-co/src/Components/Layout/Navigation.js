@@ -1,7 +1,6 @@
 import React from 'react';
 import '../CSS/NavCss.css';
 import { useState } from 'react';
-import beauty from '../Images/beautyAndBrains.avif';
 import BannerData from '../Data/BannerData.js';
 import wheel from '../Images/wheel.png';
 import AdBar from '../Models/AdBar';
@@ -63,7 +62,7 @@ function Navigation() {
           <div onMouseLeave={handleMouseLeave}>
             <NavDropdown 
               links={BannerData[hoveredLink].links}
-              picture={beauty} 
+              picture={BannerData[hoveredLink].photos} 
             />
           </div>
         ) : null}

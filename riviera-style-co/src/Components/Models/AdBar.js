@@ -1,15 +1,16 @@
 import React from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useNavigate } from 'react-router'
+import '../CSS/AdCSS.css'
 
 function AdBar({onClick}) {
     const navigate = useNavigate();
 
   return (
-      <div onClick={() => navigate("/shopping")} className='bannerAd'>
+      <div className='bannerAd'>
           Limited Time
-          <span className='adStyle'> 20% off for Mothers Day!</span>
-          <div>
+          <span onClick={() => navigate("/shopping")} className='adStyle'> 20% off for Mothers Day!</span>
+          <div className='X-out-ad'>
               <AiOutlineClose onClick={onClick}/>
           </div>
       </div>

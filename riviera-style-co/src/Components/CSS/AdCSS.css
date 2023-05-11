@@ -1,0 +1,26 @@
+
+.bannerAd {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: large;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    background: rgb(177,255,170);
+    background: linear-gradient(167deg, rgba(177,255,170,1) 0%, rgba(255,255,170,1) 42%, rgba(255,255,170,1) 48%, rgba(195,198,230,1) 74%, rgba(170,174,255,1) 96%);
+    z-index: 1;
+}
+
+.X-out-ad {
+    z-index: 3;
+}
+
+
+.adStyle {
+    padding-left: 30px;
+    font-size: xx-large;
+}

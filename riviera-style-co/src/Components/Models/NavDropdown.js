@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
+import '../CSS/NavDropdownCSS.css';
 
 
 function NavDropdown({ links, picture }) {
@@ -7,6 +8,7 @@ function NavDropdown({ links, picture }) {
     return (
       <div className='hover-wrapper'>
         <div className='hovered-box-con'>
+
           <ul className='li-con'>
             {links.map((link, index) => {
               return (
@@ -14,7 +16,17 @@ function NavDropdown({ links, picture }) {
               )
             })}
           </ul>
-          <img className='banner-img' src={picture} alt="" />
+
+          <div className='banner-picture-con'>
+            {picture.map((item, index) => {
+              return (
+                <div key={index}>
+                  <img className='inbed-banner-img' src={item} alt="" />
+                </div>
+              )
+            })}
+          </div>
+        
         </div>
       </div>
     )
