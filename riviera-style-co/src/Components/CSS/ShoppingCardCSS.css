@@ -1,0 +1,25 @@
+
+
+.shoppingCard-con {
+    height: var(--photoSize-400);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 10px 60px 10px;
+}
+
+.shopCard-img {
+    height: 100%;
+    width: 100%;
+}
+
+.shopCard-details-con {
+    padding: 10px;
+}
+
+.shopCard-details-inner-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

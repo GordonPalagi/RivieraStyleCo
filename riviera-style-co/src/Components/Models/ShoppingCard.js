@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
+import '../CSS/ShoppingCardCSS.css'
 
 function ShoppingCard({props}) {
 const [heart, setHeart] = useState(false);
