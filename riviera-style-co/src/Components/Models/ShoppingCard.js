@@ -5,22 +5,44 @@ import {AiOutlineHeart} from 'react-icons/ai'
 
 function ShoppingCard({props}) {
 const [heart, setHeart] = useState(false);
+const [hover, setHover] = useState(false);
 
 const handleClick = () => {
     setHeart(prev => !prev);
 }
 
-  return (
-    <div key={props.id} className='shoppingCard-con'>
+const handleMouseHover = () => {
+  setHover(prev => !prev);
+}
 
-        <img className='shopCard-img' src={props.image} alt="" />
+  return (
+    <div onMouseEnter={handleMouseHover}
+         onMouseLeave={handleMouseHover} 
+         key={props.id} className='shoppingCard-con'
+        >
+
+        {
+          !hover ? 
+            <img className='shopCard-img' src={props.image} alt="" />
+            :
+            <img className='shopCard-img' src={props.image2} alt="" />
+        }
         
         <div className='shopCard-details-con'>
+
             <div className='shopCard-details-inner-con'>
-                <div>{props.title}</div>
-                {!heart ? <AiOutlineHeart onClick={handleClick}/> 
-                : <AiFillHeart onClick={handleClick}/>}
+                <p>{props.title}</p>
+
+                {
+                  !heart ? 
+                      <AiOutlineHeart onClick={handleClick}/> 
+                      : 
+                      <AiFillHeart onClick={handleClick}
+                  />
+                }
+
             </div>
+
             <p>{props.price}</p>
         </div>
     </div>

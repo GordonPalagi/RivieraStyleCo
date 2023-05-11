@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import '../CSS/SlimCardCss.css'
 
 function SlimCard({catagorie, className}) {
+  const navigate = useNavigate();
+
+
   return (
-      <div className={className}>
+      <div onClick={() => navigate("/shopping")} className={className}>
           {catagorie.map((item, index) => {
             return (
                 <div key={index} className='card-con'>

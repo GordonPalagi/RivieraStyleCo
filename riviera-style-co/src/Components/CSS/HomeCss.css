@@ -7,7 +7,7 @@
     flex-direction: row-reverse;
 }
 
-h1 {
+.inner-hero-con > h1 {
     font-weight: 400;
     font-size: var(--fs-xl);
 }
@@ -68,3 +68,12 @@ h1 {
     align-items: center;
     margin: 70px 0px 30px 0px;
 }
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }

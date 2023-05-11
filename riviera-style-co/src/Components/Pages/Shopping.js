@@ -2,7 +2,7 @@ import React from 'react'
 import ShoppingCard from '../Models/ShoppingCard'
 import '../CSS/ShoppingCSS.css'
 import ClothingData from '../Data/ClothingData'
-import SidebarCard from './SidebarCard'
+import SidebarCard from '../Models/SidebarCard'
 
 function Shopping() {
 
@@ -17,14 +17,14 @@ function Shopping() {
         </div>
 
         <div className='picture-con'>
-            <h2>Clothing Styles <span>({ClothingData.length} styles to choose from)</span></h2>
+            <h2>Clothing Styles <span className='styleSpan'>({ClothingData.length} styles)</span></h2>
+
             <div className='picture-bed'>
                 {ClothingData.map((item, index) => {
-                    return (
-                        <ShoppingCard key={index} props={item}/>
-                        )
-                    })}
+                    return <ShoppingCard key={index} props={item}/>
+                })}
             </div>
+            
         </div>
 
 

@@ -1,17 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 
 function NavDropdown({ links, picture }) {
+  const navigate = useNavigate();
     return (
       <div className='hover-wrapper'>
         <div className='hovered-box-con'>
-          <div className='li-con'>
+          <ul className='li-con'>
             {links.map((link, index) => {
               return (
-                <li key={index}>{link}</li>
+                <li onClick={() => navigate("/shopping")} key={index}>{link}</li>
               )
             })}
-          </div>
+          </ul>
           <img className='banner-img' src={picture} alt="" />
         </div>
       </div>

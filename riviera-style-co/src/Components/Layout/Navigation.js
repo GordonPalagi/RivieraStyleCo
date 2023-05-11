@@ -1,11 +1,12 @@
-import React from 'react'
-import '../CSS/NavCss.css'
+import React from 'react';
+import '../CSS/NavCss.css';
 import { useState } from 'react';
-import beauty from '../Images/beautyAndBrains.avif'
-import BannerData from '../Data/BannerData.js'
-import wheel from '../Images/wheel.png'
+import beauty from '../Images/beautyAndBrains.avif';
+import BannerData from '../Data/BannerData.js';
+import wheel from '../Images/wheel.png';
 import AdBar from '../Models/AdBar';
 import NavDropdown from '../Models/NavDropdown';
+import { useNavigate } from 'react-router-dom';
 
 
 function Navigation() {
@@ -22,13 +23,15 @@ function Navigation() {
     }
 
     const handleClick = () => setClose(!close)
+    
+    const navigate = useNavigate();
 
 
     const Banner = ({title}) => {
       return (
           <nav className="banner-con">
             
-            <div className='title-con'>
+            <div onClick={() => navigate("/")} className='title-con'>
               <div className="title">{title}</div>
               <img className='title-wheel' src={wheel} alt="" />
             </div>
@@ -38,6 +41,7 @@ function Navigation() {
                 <div
                   key={index.title}
                   onMouseOver={() => handleMouseOver(index)}
+                  onClick={() => navigate("/shopping")}
                   className='item'
                 >
                   {item.title}
