@@ -4,7 +4,7 @@ import { AiFillHeart } from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
 import '../CSS/ShoppingCardCSS.css'
 
-function ShoppingCard({props}) {
+function ShoppingCard({props, className}) {
 const [heart, setHeart] = useState(false);
 const [hover, setHover] = useState(false);
 
@@ -19,7 +19,7 @@ const handleMouseHover = () => {
   return (
     <div onMouseEnter={handleMouseHover}
          onMouseLeave={handleMouseHover} 
-         key={props.id} className='shoppingCard-con'
+         key={props.id} className={className}
         >
 
         {

@@ -20,9 +20,29 @@
     margin: 40px;
 }
 
+.size-adjust-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+
 .styleSpan {
     font-size: xx-small;
     color: darkgrey;
+}
+
+.size-icon-con {
+    display: flex;
+}
+
+.size-icon-con > .icon {
+    padding: 0px 10px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px -5px gray;
+    border-radius: 5px;
+    height: fit-content;
 }
 
 .picture-bed {

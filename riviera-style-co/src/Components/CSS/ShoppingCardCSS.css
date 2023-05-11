@@ -8,6 +8,22 @@
     padding: 20px;
     margin: 10px 10px 60px 10px;
 }
+.shoppingCard-con-medium {
+    height: var(--photoSize-500);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 10px 60px 10px;
+}
+.shoppingCard-con-large {
+    height: var(--photoSize-800);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 10px 60px 10px;
+}
 
 .shopCard-img {
     height: 100%;
