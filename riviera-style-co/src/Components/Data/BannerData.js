@@ -43,3 +43,118 @@ export default
   },
 ];
 
+
+// import Dresses from '../Images/Dresses.avif';
+// import fallClothes from '../Images/fallClothes.avif';
+// import Jackets from '../Images/Jackets.avif';
+
+// export default [
+//   {
+//     title: "Women's",
+//     links: [
+//       {
+//         title: "Dresses",
+//         id: "dresses",
+//         sublinks: [
+//           "Casual Dresses",
+//           "Maxi Dresses",
+//           "Party Dresses",
+//           "Wedding Guest Dresses",
+//           "Little Black Dresses",
+//           "Midi Dresses",
+//           "Wrap Dresses",
+//           "Mini Dresses",
+//           "Summer Dresses",
+//           "Boho Dresses",
+//         ],
+//       },
+//       {
+//         title: "Tops",
+//         id: "tops",
+//         sublinks: [
+//           "Blouses",
+//           "T-shirts",
+//           "Crop Tops",
+//           "Bodysuits",
+//           "Tank Tops",
+//           "Sweatshirts",
+//           "Hoodies",
+//           "Sweaters",
+//           "Tunics",
+//           "Shirts",
+//         ],
+//       },
+//       {
+//         title: "Bottoms",
+//         id: "bottoms",
+//         sublinks: [
+//           "Jeans",
+//           "Pants",
+//           "Shorts",
+//           "Skirts",
+//           "Leggings",
+//           "Jumpsuits",
+//           "Overalls",
+//           "Culottes",
+//           "Capris",
+//           "Bermudas",
+//         ],
+//       },
+//     ],
+//     photos: [Dresses, fallClothes, Jackets],
+//   },
+//   {
+//     title: "Men's",
+//     links: [
+//       {
+//         title: "Shirts",
+//         id: "shirts",
+//         sublinks: [
+//           "Dress Shirts",
+//           "Casual Shirts",
+//           "Flannel Shirts",
+//           "Henley Shirts",
+//           "Polo Shirts",
+//           "T-shirts",
+//           "Sweatshirts",
+//           "Hoodies",
+//           "Tank Tops",
+//           "Activewear Shirts",
+//         ],
+//       },
+//       {
+//         title: "Pants",
+//         id: "pants",
+//         sublinks: [
+//           "Jeans",
+//           "Dress Pants",
+//           "Casual Pants",
+//           "Cargo Pants",
+//           "Sweatpants",
+//           "Chinos",
+//           "Joggers",
+//           "Track Pants",
+//           "Corduroys",
+//           "Activewear Pants",
+//         ],
+//       },
+//       {
+//         title: "Shoes",
+//         id: "shoes",
+//         sublinks: [
+//           "Sneakers",
+//           "Loafers",
+//           "Boots",
+//           "Sandals",
+//           "Slip-Ons",
+//           "Oxfords",
+//           "Boat Shoes",
+//           "Dress Shoes",
+//           "Running Shoes",
+//           "Hiking Shoes",
+//         ],
+//       },
+//     ],
+//     photos: [Dresses, fallClothes, Jackets],
+//   }
+// ]

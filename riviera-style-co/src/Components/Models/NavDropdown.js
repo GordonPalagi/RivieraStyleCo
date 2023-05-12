@@ -19,11 +19,7 @@ function NavDropdown({ links, picture }) {
 
           <div className='banner-picture-con'>
             {picture.map((item, index) => {
-              return (
-                <div key={index}>
-                  <img className='inbed-banner-img' src={item} alt="" />
-                </div>
-              )
+              return <img key={index} className='inbed-banner-img' src={item} alt="" />
             })}
           </div>
         
