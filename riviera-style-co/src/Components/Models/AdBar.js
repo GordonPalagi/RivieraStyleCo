@@ -1,7 +1,7 @@
 import React from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useNavigate } from 'react-router'
-import '../CSS/AdCSS.css'
+import '../CSS/Models/AdCSS.css'
 
 function AdBar({onClick}) {
     const navigate = useNavigate();

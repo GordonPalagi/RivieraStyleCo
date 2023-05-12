@@ -19,7 +19,7 @@
 
 import React from 'react'
 import fashion from '../Images/fashion_photo.avif'
-import '../CSS/HeroCSS.css'
+import '../CSS/Models/HeroCSS.css'
 import wheel from '../Images/wheel.png'
 
 function HeroPoster({title}) {

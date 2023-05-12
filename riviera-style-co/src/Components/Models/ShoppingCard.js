@@ -2,11 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
-import '../CSS/ShoppingCardCSS.css'
+import { useNavigate } from 'react-router'
+import '../CSS/Models/ShoppingCardCSS.css'
 
 function ShoppingCard({props, className}) {
 const [heart, setHeart] = useState(false);
 const [hover, setHover] = useState(false);
+
+const navigate = useNavigate();
 
 const handleClick = () => {
     setHeart(prev => !prev);
@@ -17,10 +20,12 @@ const handleMouseHover = () => {
 }
 
   return (
-    <div onMouseEnter={handleMouseHover}
-         onMouseLeave={handleMouseHover} 
-         key={props.id} className={className}
-        >
+    <div
+      onClick={() => navigate('/shopItem')}
+      onMouseEnter={handleMouseHover}
+      onMouseLeave={handleMouseHover} 
+      key={props.id} className={className}
+    >
 
         {
           !hover ? 

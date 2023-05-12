@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SidebarData from '../Data/SidebarData';
-import '../CSS/SidebarCSS.css';
+import '../CSS/Models/SidebarCSS.css';
 
 function SidebarCard() {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/NavCss.css';
+import '../CSS/Layout/NavCss.css';
 import { useState } from 'react';
 import BannerData from '../Data/BannerData.js';
 import wheel from '../Images/wheel.png';

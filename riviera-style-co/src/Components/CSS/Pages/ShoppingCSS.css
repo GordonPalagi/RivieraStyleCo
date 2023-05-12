@@ -1,0 +1,17 @@
+.shopping-con {
+    display: flex;
+    overflow: scroll;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.shopping-sidebar-con {
+    width: 80%;
+    /* margin-right: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import '../CSS/SlimCardCss.css'
+import '../CSS/Models/SlimCardCss.css'
 
 function SlimCard({catagorie, className}) {
   const navigate = useNavigate();

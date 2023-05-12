@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/HomeCss.css'
+import '../CSS/Pages/HomeCss.css'
 import freeStock from '../Images/freeStock.avif'
 import fallClothes from '../Images/fallClothes.avif'
 import RightArrowData from '../Data/RightArrowData'
