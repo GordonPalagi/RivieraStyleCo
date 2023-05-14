@@ -1,14 +1,19 @@
 
 .picture-con > h2 {
-    margin: 40px;
+
+}
+
+.picture-con {
+
+
 }
 
 .size-adjust-con {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 60px;
-
+    padding: 0px 10px;
+    width: 80%;
 }
 
 .styleSpan {
@@ -18,7 +23,6 @@
 
 .size-icon-con {
     display: flex;
-    
 }
 
 .size-icon-con > .icon {
@@ -30,9 +34,47 @@
     height: fit-content;
 }
 
-.picture-bed {
-    display: flex;
-    overflow: scroll;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.picture-bed-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    max-width: 100%; 
+    width: 80%;
+    padding: 10px;
+}
+
+.picture-bed-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    max-width: 100%; 
+    width: 80%;
+    padding: 10px;
+}
+
+.picture-bed-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    max-width: 100%; 
+    width: 80%;
+    padding: 10px;
+}
+
+.picture-bed-five {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    max-width: 100%;
+    width: 80%;
+    padding: 10px;
+}
+
+.picture-bed-six {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    max-width: 100%;
+    width: 80%; 
+    padding: 10px;
 }

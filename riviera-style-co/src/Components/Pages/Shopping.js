@@ -11,18 +11,18 @@ import ClothingData from '../Data/ClothingData'
 function Shopping() {
 
 
-    const [classNameState, setClassNameState] = useState('shoppingCard-con');
+    const [classNameState, setClassNameState] = useState('picture-bed-four');
 
     const handleBigGrid = () => {
-        setClassNameState('shoppingCard-con-large');
+        setClassNameState('picture-bed-four');
     }
 
     const handleMediumGrid = () => {
-        setClassNameState('shoppingCard-con-medium');
+        setClassNameState('picture-bed-five');
     }
 
     const handleSmallGrid = () => {
-        setClassNameState('shoppingCard-con');
+        setClassNameState('picture-bed-six');
     }
 
 
@@ -40,7 +40,8 @@ function Shopping() {
                 bigGrid={handleBigGrid}
                 medGrid={handleMediumGrid}
                 smGrid={handleSmallGrid} 
-                length={ClothingData.length}   
+                length={ClothingData.length}
+                title={'Clothing Styles'}   
             />
 
         </div>

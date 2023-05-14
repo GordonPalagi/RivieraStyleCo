@@ -3,10 +3,14 @@
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    padding: 1vw;
+    padding: 10px;
     height: 5vh;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    background-color: white;
+    z-index: 4;
+    top: 0px;
 }
 
 .title-con {
@@ -14,6 +18,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 2;
+        
 }
 
 
@@ -23,10 +28,12 @@
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: x-large;
+    
 }
 
 .title-wheel {
     height: var(--photoSize-200);
+    
 }
 
 .item {
@@ -35,8 +42,10 @@
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
     flex-grow: 1;
+    
 }
 
 .item:hover {
     color: rgb(240, 205, 161);
+    
 }

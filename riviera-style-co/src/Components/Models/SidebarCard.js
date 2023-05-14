@@ -15,15 +15,14 @@ const handleMouseHover = (index) => {
 
 const handleMouseOut = () => {
     setChoice(false);
-
     setLink(null);
 }
 
 
-
   return (
      !choice ? 
-        <ul className='sidebar-ul-con'>
+        <ul 
+            className='sidebar-ul-con'>
             {SidebarData.map((item, index) => {
                 return (
                     <li 
@@ -36,15 +35,23 @@ const handleMouseOut = () => {
                 )
             })}
         </ul> : 
-        <ul  className='sidebar-ul-con'>
+        <ul style={{position: 'sticky', right: '100px'}}
+          className='sidebar-ul-con'>
+
             {SidebarData.map((item, index) => {
                 return (
-                    <li onMouseEnter={() => handleMouseHover(index)}
-                        onMouseLeave={handleMouseOut} key={item.id}>
+                    <li 
+                        onMouseEnter={() => handleMouseHover(index)}
+                        onMouseLeave={handleMouseOut} key={item.id}
+                    >
+
                         {item.linkTitle}
+
                         {index === link && (
-                            <ul onMouseLeave={handleMouseOut} 
+                            <ul 
+                                onMouseLeave={handleMouseOut} 
                                 className={choice ? 'sublinks show' : 'sublinks'}>
+
                                 {item.subLinks.map((sublink, subIndex) => {
                                     return <li key={subIndex}>{sublink}</li>
                                 })}
@@ -58,24 +65,3 @@ const handleMouseOut = () => {
 }
 
 export default SidebarCard
-
- // !choice ? 
-        // <ul>
-        //     {SidebarData.map((item, index) => {
-        //         return (
-        //             <li onClick={() => handleClick(index)} key={item.id}>{item.linkTitle}</li>
-        //         )
-        //     })}
-        // </ul> : 
-        // <ul className='sidebar-card'>
-        //     {SidebarData.map((item, index) => {
-        //         return (
-        //             <li onClick={() => handleClick(index)} key={item.id}>{item.linkTitle}
-        //                 <ul className='sublinks'>
-        //                     <li key={index}>{item.subLinks}</li>
-        //                 </ul>
-        //             </li>
-        //         )
-        //     })}
-            
-        // </ul>

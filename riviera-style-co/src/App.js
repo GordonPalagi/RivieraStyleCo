@@ -16,6 +16,9 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>
+    
+    // <IntersectionObserverTest/>
+
   )
 }
 

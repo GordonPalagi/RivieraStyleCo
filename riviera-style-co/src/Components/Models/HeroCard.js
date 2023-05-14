@@ -6,7 +6,7 @@ function HeroCard({ title, array, photo, className }) {
     return (
       <div className={className}>
         <div className='inner-hero-con '>
-        <h1>{title}</h1>
+          <h1>{title}</h1>
           {array.map((item, index) => {
                 return <div onClick={() => navigate("/shopping")} key={index} className='subheader'>{item.sub}</div>
             })}

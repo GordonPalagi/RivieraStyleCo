@@ -5,18 +5,18 @@ import '../CSS/Pages/ShopItemCSS.css'
 
 function ShopItem() {
 
-    const [classNameState, setClassNameState] = useState('shoppingCard-con');
+    const [classNameState, setClassNameState] = useState('picture-bed-two');
 
     const handleBigGrid = () => {
-        setClassNameState('shoppingCard-con-large');
+        setClassNameState('picture-bed-two');
     }
 
     const handleMediumGrid = () => {
-        setClassNameState('shoppingCard-con-medium');
+        setClassNameState('picture-bed-three');
     }
 
     const handleSmallGrid = () => {
-        setClassNameState('shoppingCard-con');
+        setClassNameState('picture-bed-four');
     }
   return (
     <div>
@@ -26,6 +26,7 @@ function ShopItem() {
             medGrid={handleMediumGrid}
             smGrid={handleSmallGrid}
             length={4}
+            title={'Clothing Styles'}
         />
     </div>
   )

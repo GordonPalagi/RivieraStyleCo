@@ -1,34 +1,48 @@
 import React from 'react';
 import '../CSS/Layout/NavCss.css';
-import { useState } from 'react';
 import BannerData from '../Data/BannerData.js';
 import wheel from '../Images/wheel.png';
-import AdBar from '../Models/AdBar';
 import NavDropdown from '../Models/NavDropdown';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useCallback, useState } from 'react';
 
 
 function Navigation() {
 
     const [hoveredLink, setHoveredLink] = useState(null);
-    const [close, setClose] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
     
     const handleMouseOver = (index) => {
       setHoveredLink(index);
     };
-
     const handleMouseLeave = () => {
       setHoveredLink(null);
     }
-
-    const handleClick = () => setClose(!close)
-    
     const navigate = useNavigate();
+
+
+
+    const handleScroll = useCallback(() => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 150) || (currentScrollPos < 100));
+      setPrevScrollPos(currentScrollPos);
+      setHoveredLink(null);
+    }, [prevScrollPos]);
+
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+
+      return () => window.removeEventListener('scroll', handleScroll);
+
+    }, [prevScrollPos, visible, handleScroll]);
+
+    
 
 
     const Banner = ({title}) => {
       return (
-          <nav className="banner-con">
+          <nav style={{top: visible ? '0' : '-100px'}} className="banner-con">
             
             <div onClick={() => navigate("/")} className='title-con'>
               <div className="title">{title}</div>
@@ -38,7 +52,7 @@ function Navigation() {
             {BannerData.map((item, index) => {
               return (
                 <div
-                  key={index.title}
+                  key={index}
                   onMouseOver={() => handleMouseOver(index)}
                   onClick={() => navigate("/shopping")}
                   className='item'
@@ -56,7 +70,6 @@ function Navigation() {
     return (
       <>
         <Banner title={"Riviera Style Co."}/>
-        {close && <AdBar onClick={handleClick}/>}
 
         {hoveredLink !== null ? (
           <div onMouseLeave={handleMouseLeave}>
