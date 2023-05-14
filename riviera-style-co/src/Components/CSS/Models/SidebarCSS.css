@@ -54,11 +54,5 @@
     margin: 5px 0;
   }
 
-  .slid-in {
-    transform: translate(0) !important;
-    opacity: 1;
-    transform: translateX(-2%);
-  }
-
 
   
