@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import '../CSS/Models/NavDropdownCSS.css';
+import '../CSS/Models/NavDropdownCSS.css'
 
 
 function NavDropdown({ links, picture }) {

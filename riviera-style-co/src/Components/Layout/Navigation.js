@@ -42,7 +42,7 @@ function Navigation() {
 
     const Banner = ({title}) => {
       return (
-          <nav style={{top: visible ? '0' : '-100px'}} className="banner-con">
+          <nav style={{top: visible ? '0' : '-100%'}} className="banner-con">
             
             <div onClick={() => navigate("/")} className='title-con'>
               <div className="title">{title}</div>

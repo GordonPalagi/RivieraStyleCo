@@ -20,37 +20,22 @@ const handleMouseOut = () => {
 
 
   return (
-     !choice ? 
         <ul 
-            className='sidebar-ul-con'>
-            {SidebarData.map((item, index) => {
-                return (
-                    <li 
-                        onMouseOut={handleMouseOut}
-                        onMouseEnter={() => handleMouseHover(index)}
-                        onMouseLeave={handleMouseOut} 
-                        key={item.id}>
-                            {item.linkTitle}
-                    </li>
-                )
-            })}
-        </ul> : 
-        <ul style={{position: 'sticky', right: '100px'}}
+            onMouseLeave={handleMouseOut}
           className='sidebar-ul-con'>
 
             {SidebarData.map((item, index) => {
                 return (
                     <li 
                         onMouseEnter={() => handleMouseHover(index)}
-                        onMouseLeave={handleMouseOut} key={item.id}
+                        className='main-links'
                     >
 
                         {item.linkTitle}
 
                         {index === link && (
                             <ul 
-                                onMouseLeave={handleMouseOut} 
-                                className={choice ? 'sublinks show' : 'sublinks'}>
+                                className={'sublinks'}>
 
                                 {item.subLinks.map((sublink, subIndex) => {
                                     return <li key={subIndex}>{sublink}</li>

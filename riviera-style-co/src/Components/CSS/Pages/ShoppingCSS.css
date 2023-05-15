@@ -9,6 +9,19 @@
 
 .shopping-sidebar-con {
     background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    position: fixed;
+    transition: 1s ease-in-out;
+}
+
+.hide-sidebar {
+    right: 100%;
+    background-color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,15 +30,3 @@
     padding: 20px;
     position: fixed;
 }
-
-/* .shopping-sidebar-con {
-    background-color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    position: sticky;
-    top: 50vh; /* change this to the height of the element before the sidebar
-  } */

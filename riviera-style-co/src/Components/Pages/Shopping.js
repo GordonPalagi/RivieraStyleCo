@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 
 function Shopping() {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [isScrolling, setIsScrolling] = useState(false);
+    const [showSidebar, setShowSidebar] = useState(true);
     const [classNameState, setClassNameState] = useState('picture-bed-four');
 
     const handleBigGrid = () => {
@@ -28,7 +28,7 @@ function Shopping() {
 
     const handleScroll = useCallback(() => {
         const currentScrollPos = window.pageYOffset;
-        setIsScrolling((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 200) || (currentScrollPos < 150));
+        setShowSidebar((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 200) || (currentScrollPos < 150));
         setPrevScrollPos(currentScrollPos);
     },[prevScrollPos]);
 
@@ -36,7 +36,7 @@ function Shopping() {
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos, isScrolling, handleScroll])
+    }, [prevScrollPos, showSidebar, handleScroll])
     
 
 
@@ -45,8 +45,7 @@ function Shopping() {
         <Navigator/>
         <div className='shopping-con' >
 
-            <div className='shopping-sidebar-con'
-                 style={{right: isScrolling ? '0' : '-1000px'}}>
+            <div className={showSidebar ? 'shopping-sidebar-con' : 'hide-sidebar'}>
                 <SidebarCard/>
             </div>
 
