@@ -1,12 +1,4 @@
 
-.picture-con > h2 {
-
-}
-
-.picture-con {
-
-
-}
 
 .size-adjust-con {
     display: flex;
@@ -34,7 +26,7 @@
     height: fit-content;
 }
 
-.picture-bed-two {
+/* .picture-bed-two {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4px;
@@ -50,7 +42,7 @@
     max-width: 100%; 
     width: 80%;
     padding: 10px;
-}
+} */
 
 .picture-bed-four {
     display: grid;

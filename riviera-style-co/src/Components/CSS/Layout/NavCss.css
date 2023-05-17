@@ -37,12 +37,11 @@
 }
 
 .item {
-    padding: 2vw;
     transition: .2s ease-in-out;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
     flex-grow: 1;
-    
+    display: inline-block;
 }
 
 .item:hover {

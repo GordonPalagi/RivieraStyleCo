@@ -1,33 +1,50 @@
 import React from 'react'
-import PictureBed from '../Models/PictureBed'
 import { useState } from 'react'
 import '../CSS/Pages/ShopItemCSS.css'
+import ClothingData from '../Data/ClothingData.js'
+
 
 function ShopItem() {
 
-    const [classNameState, setClassNameState] = useState('picture-bed-two');
-
-    const handleBigGrid = () => {
-        setClassNameState('picture-bed-two');
+    const [clothingItem, setClothingItem] = useState(ClothingData[0])
+    
+    const handleClick = (item) => {
+        setClothingItem(item);
     }
-
-    const handleMediumGrid = () => {
-        setClassNameState('picture-bed-three');
-    }
-
-    const handleSmallGrid = () => {
-        setClassNameState('picture-bed-four');
-    }
+    
+    
   return (
-    <div>
-        <PictureBed 
-            className={classNameState}
-            bigGrid={handleBigGrid}
-            medGrid={handleMediumGrid}
-            smGrid={handleSmallGrid}
-            length={4}
-            title={'Clothing Styles'}
-        />
+    <div className='full-shopItem-con'>
+        <div className='photo-gallery-con'>
+            
+            <img className='big-picture' src={clothingItem.image2} alt={clothingItem.description} />
+            <img className='big-picture' src={clothingItem.image} alt={clothingItem.description} />
+
+            <div className='side-picture-con'>
+                {ClothingData.slice(0, 4).map((item) => (
+                    <img
+                        className='side-images'
+                        key={item.id}
+                        onClick={() => handleClick(item)} 
+                        src={item.image} alt={item.description} 
+                    />
+                ))} 
+            </div>
+
+        </div>
+        <div className='description-con'>
+            <h1>{clothingItem.title}</h1>
+            <p>{clothingItem.price}</p>
+            <p>{clothingItem.description}</p>
+            <div className='size-con'>{clothingItem.size.map((item) => (
+                <span>{item}</span>
+                ))}
+            </div>
+            <ul>{clothingItem.details.map((item) => (
+                <li>{item}</li>
+            ))}</ul>
+            <p>{clothingItem.style}</p>
+        </div>
     </div>
   )
 }
