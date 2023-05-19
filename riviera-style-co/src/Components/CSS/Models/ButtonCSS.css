@@ -1,0 +1,45 @@
+.button-con {
+    height: 50px;
+    background-color: bisque;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.button-con:hover {
+    transform: scale(1.03);
+    background-color: blanchedalmond;
+}
+
+.button-con > button {
+    background-color: transparent;
+    border: 0;
+}
+
+.photo-cover-button {
+    position: relative;
+    top: -50px;
+    left: 10px;
+    z-index: 3;
+    background-color: bisque;
+    width: fit-content;
+    padding: 6px;
+    font-size: var(--fs-400);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.photo-cover-button > button {
+    background-color: transparent;
+    border: 0;
+}
+
+.photo-cover-button:hover {
+    transform: scale(1.03);
+}
+

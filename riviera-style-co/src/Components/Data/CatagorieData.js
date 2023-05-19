@@ -20,5 +20,21 @@ export default
     {
         catagorie: "OuterWear",
         photo: OuterWear
+    },
+    {
+        catagorie: "Dresses",
+        photo: Dresses
+    },
+    {
+        catagorie: "Jackets",
+        photo: Jackets
+    },
+    {
+        catagorie: "Sweats",
+        photo: Sweats
+    },
+    {
+        catagorie: "OuterWear",
+        photo: OuterWear
     }
 ]

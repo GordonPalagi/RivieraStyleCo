@@ -1,54 +1,49 @@
 import React from 'react'
 import { useState } from 'react'
-import { AiFillHeart } from 'react-icons/ai'
-import {AiOutlineHeart} from 'react-icons/ai'
 import { useNavigate } from 'react-router'
 import '../CSS/Models/ShoppingCardCSS.css'
+import CardDetails from './CardDetails'
 
 function ShoppingCard({props}) {
-const [heart, setHeart] = useState(false);
 const [hover, setHover] = useState(false);
 
 const navigate = useNavigate();
 
-const handleClick = () => {
-    setHeart(prev => !prev);
+const handleMouseEnter = () => {
+  setHover(true);
 }
 
-const handleMouseHover = () => {
-  setHover(prev => !prev);
+const handleMouseLeave = () => {
+  setHover(false);
 }
-
 
 
   return (
-    <div
-      onClick={() => navigate('/shopItem')}
-      onMouseEnter={handleMouseHover}
-      onMouseLeave={handleMouseHover} 
-      key={props.id} 
-      className={'shoppingCard-con'}>
+    <div key={props.id} className={'shoppingCard-con'}>
         
         {!hover ? 
-            <img className='shopCard-img' src={props.image} alt="" />
+            <img 
+              onClick={() => navigate('/shopItem')} 
+              className='shopCard-img' 
+              src={props.image} alt="" 
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
             :
-            <img className='shopCard-img' src={props.image2} alt="" />
+            <img 
+              onClick={() => navigate('/shopItem')} 
+              className='shopCard-img' 
+              src={props.image2} alt="" 
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
         }
         
-        <div className='shopCard-details-con'>
-            <div className='shopCard-details-inner-con'>
-                <p>{props.title}</p>
-
-                {!heart ? 
-                      <AiOutlineHeart onClick={handleClick}/> 
-                      : 
-                      <AiFillHeart onClick={handleClick}/>
-                }
-
-            </div>
-            <p>{props.price}</p>
-
-        </div>
+        <CardDetails 
+          title={props.title} 
+          price={props.price} 
+        />
+        
     </div>
   )
 }

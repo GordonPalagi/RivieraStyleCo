@@ -80,11 +80,17 @@
     margin: 70px 0px 30px 0px;
 }
 
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-  }
+.most-wanted-slimCard {
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--fonfam-highlight);
+    font-size: var(--fs-l);
+}
+
+.tailored-slimCard {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonfam-highlight);
+    font-size: var(--fs-l);
+
+}

@@ -6,11 +6,10 @@ import RightArrowData from '../Data/RightArrowData'
 import LeftArrowData from '../Data/LeftArrowData'
 import HeroCard from '../Models/HeroCard'
 import SlimCard from '../Models/SlimCard'
-import CatagorieData from '../Data/CatagorieData'
-import blockCardData from '../Data/blockCardData'
 import HeroPoster from '../Models/HeroPoster'
 import { useState, useEffect, useRef } from 'react'
 import { useIntersection } from '../CustomHooks/useIntersection'
+import ClothingData from '../Data/ClothingData'
 
 function Home() {
   const [shouldSlideIn, setShouldSlideIn] = useState(false);
@@ -25,16 +24,12 @@ function Home() {
   useEffect(() => {
     if(isIntersecting) {
       setShouldSlideIn(true);
-    } else {
-      setShouldSlideIn(false)
     }
   }, [isIntersecting])
   
   useEffect(() => {
     if(isLowerIntersecting) {
       setLowerSlideIn(true);
-    } else {
-      setLowerSlideIn(false)
     }
   }, [isLowerIntersecting])
 
@@ -63,10 +58,33 @@ function Home() {
         </div>
 
         <div className='between'><span className='most-wanted'>Shop the most wanted</span></div>
-        <SlimCard className={'slimCard-con'} catagorie={CatagorieData}/>
+        
+        <div className='most-wanted-slimCard'>
+          {ClothingData.slice(0, 4).map((item) => (
+            <SlimCard 
+              props={item} 
+              className='card-con' 
+              nav={'/shopping'}
+              state={false}
+            />
+          ))}
+        </div>
+        
         <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div>
-        <SlimCard className={'threeCardSlim'} catagorie={blockCardData}/>
-        {/* <div className='between'></div> */}
+        
+        <div className='tailored-slimCard'>
+          {ClothingData.slice(0, 3).map((item) => (
+            <SlimCard 
+              props={item} 
+              className='card-con' 
+              nav='/shopping' 
+              state={false}
+            />
+          ))}
+        </div>
+
+        <div className='between'><span className='most-wanted'></span></div>
+
     </>
   )
 }

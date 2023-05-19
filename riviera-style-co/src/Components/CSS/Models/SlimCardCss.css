@@ -2,17 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: var(--fonfam-highlight);
-    font-size: var(--fs-l);
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .threeCardSlim {
     display: flex;
     justify-content: center;
-    font-family: var(--fonfam-highlight);
     height: var(--photoSize-800);
-    font-size: var(--fs-l);
     text-align: center;
+    cursor: pointer;
 }
 
 .card-con {
@@ -22,8 +21,17 @@
 .slimCard-photo {
     display: flex;
     height: var(--photoSize-500);
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .card-con:hover {
     text-decoration: underline;
+}
+
+.slimCard-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }

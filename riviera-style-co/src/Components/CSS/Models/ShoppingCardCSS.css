@@ -5,20 +5,11 @@
     flex-direction: column;
     width: calc((100% / var(--col-count)) - var(--gap) - 2px);
     height: auto;
+    object-fit: cover;
+    padding: 2px;
 }
 
 .shopCard-img {
-    object-fit: cover;
     width: 100%;
-    max-height: 100%;
-}
-
-.shopCard-details-con {
-    padding: 10px;
-}
-
-.shopCard-details-inner-con {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100%;
 }
