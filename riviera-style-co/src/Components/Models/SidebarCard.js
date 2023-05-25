@@ -2,43 +2,34 @@ import React from 'react'
 import { useState } from 'react'
 import SidebarData from '../Data/SidebarData';
 import '../CSS/Models/SidebarCSS.css';
+import { Link } from 'react-router-dom';
 
 function SidebarCard() {
 
-const [choice, setChoice] = useState(false);
 const [link, setLink] = useState(null);
 
 const handleMouseHover = (index) => {
-    setChoice(true);
     setLink(index);
 }
 
 const handleMouseOut = () => {
-    setChoice(false);
     setLink(null);
 }
 
 
   return (
-        <ul 
-            onMouseLeave={handleMouseOut}
-          className='sidebar-ul-con'>
-
+        <ul onMouseLeave={handleMouseOut} 
+            className='sidebar-ul-con'>
+                
             {SidebarData.map((item, index) => {
                 return (
-                    <li 
-                        onMouseEnter={() => handleMouseHover(index)}
-                        className='main-links'
-                    >
-
+                    <li onMouseEnter={() => handleMouseHover(index)}
+                        className='main-links'>
                         {item.linkTitle}
-
                         {index === link && (
-                            <ul 
-                                className={'sublinks'}>
-
+                            <ul className={'sublinks'}>
                                 {item.subLinks.map((sublink, subIndex) => {
-                                    return <li key={subIndex}>{sublink}</li>
+                                    return <Link className='sidebar-link Link' key={subIndex}>{sublink}</Link>
                                 })}
                             </ul>
                         )}

@@ -26,9 +26,8 @@
     flex: 1;
 }
 
-
-.tag-con > h2 {
-    margin-bottom: 5px;
+.tag-con > h4 {
+    margin-bottom: 15px;
 }
 
 .understated {
@@ -44,23 +43,16 @@
 
 .list > li {
     padding: 10px 0;
-    transition: .3s;
-    cursor: pointer;
 }
 
 .icon-con {
     display: flex;
     align-items: flex-start;
+    padding: 10px 0px;
 }
 
 .icon {
     padding: 10px 40px 10px 0px;
     cursor: pointer;
-}
-
-.list > li:hover {
-    color: var(--clr-hover-800);
-    scale: 1.03;
-    text-decoration: underline;
 }
 

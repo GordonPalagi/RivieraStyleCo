@@ -1,0 +1,6 @@
+.bannerLinks {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    width: fit-content;
+}

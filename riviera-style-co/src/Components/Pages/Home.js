@@ -5,11 +5,13 @@ import fallClothes from '../Images/fallClothes.avif'
 import RightArrowData from '../Data/RightArrowData'
 import LeftArrowData from '../Data/LeftArrowData'
 import HeroCard from '../Models/HeroCard'
-import SlimCard from '../Models/SlimCard'
 import HeroPoster from '../Models/HeroPoster'
 import { useState, useEffect, useRef } from 'react'
 import { useIntersection } from '../CustomHooks/useIntersection'
 import ClothingData from '../Data/ClothingData'
+import { lazy, Suspense } from 'react'
+
+const LazyCardSection = lazy(() => import('../Models/SlimCard.js'));
 
 function Home() {
   const [shouldSlideIn, setShouldSlideIn] = useState(false);
@@ -61,12 +63,14 @@ function Home() {
         
         <div className='most-wanted-slimCard'>
           {ClothingData.slice(0, 4).map((item) => (
-            <SlimCard 
-              props={item} 
-              className='card-con' 
-              nav={'/shopping'}
-              state={false}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyCardSection 
+                  props={item} 
+                  className='card-con' 
+                  nav={'/shopping'}
+                  state={false}
+                  />
+            </Suspense>
           ))}
         </div>
         
@@ -74,16 +78,20 @@ function Home() {
         
         <div className='tailored-slimCard'>
           {ClothingData.slice(0, 3).map((item) => (
-            <SlimCard 
-              props={item} 
-              className='card-con' 
-              nav='/shopping' 
-              state={false}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyCardSection 
+                props={item} 
+                className='card-con' 
+                nav='/shopping' 
+                state={false}
+                />
+            </Suspense>
           ))}
         </div>
 
-        <div className='between'><span className='most-wanted'></span></div>
+        <div className='between'>
+          <span className='most-wanted'></span>
+        </div>
 
     </>
   )

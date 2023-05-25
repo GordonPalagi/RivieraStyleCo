@@ -3,9 +3,14 @@ import '../CSS/Layout/FooterCSS.css'
 import { SiLinkedin } from 'react-icons/si'
 import { SiTwitter } from 'react-icons/si'
 import { SiGithub } from 'react-icons/si'
+import { useNavigate } from 'react-router'
 
 
 function Footer() {
+const navigate = useNavigate();
+
+
+
   return (
     <div className='footer-con'>
 
@@ -21,19 +26,19 @@ function Footer() {
         </div>
 
         <ul className='list'>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Shipping & Returns</li>
-          <li>Privacy Policy</li>
-          <li>Terms & Conditions</li>
-          <li>FAQ</li>
+          <li onClick={() => navigate('/about')} className='Link'>About Us</li>
+          <li className='Link'>Contact Us</li>
+          <li className='Link'>Shipping & Returns</li>
+          <li className='Link'>Privacy Policy</li>
+          <li className='Link'>Terms & Conditions</li>
+          <li className='Link'>FAQ</li>
         </ul>
         <ul className='list'>
-          <li>Newsletter Signup</li>
-          <li>Size Chart</li>
-          <li>Customer Reviews</li>
-          <li>Store Locator</li>
-          <li>Careers</li>
+          <li className='Link'>Newsletter Signup</li>
+          <li className='Link'>Size Chart</li>
+          <li className='Link'>Customer Reviews</li>
+          <li className='Link'>Store Locator</li>
+          <li className='Link'>Careers</li>
         </ul>
 
 

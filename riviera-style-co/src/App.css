@@ -36,6 +36,22 @@ body {
   margin: 0;
 }
 
+.Link {
+  color: black;
+  font-family: var(--fonfam-base);
+  text-decoration: none;
+  transition: .1s ease-out;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+}
+
+.Link:hover {
+  color: var(--clr-hover-400);
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

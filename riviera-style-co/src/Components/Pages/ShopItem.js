@@ -18,7 +18,9 @@ function ShopItem() {
     <div className='full-shopItem-con'>
         <div className='shopItem-con'>
             <SideImages clothingData={ClothingData} handleClick={handleClick} />
-            <PhotoGallery clothingItem={clothingItem} />
+            <PhotoGallery  
+              clothingItem={clothingItem} 
+            />
             <ClothingDescription clothingItem={clothingItem} />
         </div>
 

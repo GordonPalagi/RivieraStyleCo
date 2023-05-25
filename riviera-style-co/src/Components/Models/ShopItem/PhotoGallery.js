@@ -1,10 +1,38 @@
 import React from 'react'
+import { useState } from 'react';
 
-const PhotoGallery = ({ clothingItem }) => (
+const PhotoGallery = ({ clothingItem }) => {
+  const [leftZoom, setLeftZoom] = useState(false);
+  const [rightZoom, setRightZoom] = useState(false);
+
+
+  const handleLeftZoom = () => {
+    setLeftZoom(prev => !prev);
+  }
+  const handleRightZoom = () => {
+    setRightZoom(prev => !prev);
+  }
+
+  return (
     <div className='photo-gallery-con'>
-      <img className='big-picture' src={clothingItem.image2} alt={clothingItem.description} />
-      <img className='big-picture' src={clothingItem.image} alt={clothingItem.description} />
+      <div className='image-wrapper'>
+        <img 
+          onClick={handleLeftZoom} 
+          className={!leftZoom ? 'big-picture' : 'big-picture plus'} 
+          src={clothingItem.image2} 
+          alt={clothingItem.description} 
+          />
+      </div>
+      <div className='image-wrapper'>
+        <img 
+          onClick={handleRightZoom} 
+          className={!rightZoom ? 'big-picture' : 'big-picture plus'} 
+          src={clothingItem.image} 
+          alt={clothingItem.description} 
+          />
+      </div>
     </div>
-);
+  )
+};
 
 export default PhotoGallery

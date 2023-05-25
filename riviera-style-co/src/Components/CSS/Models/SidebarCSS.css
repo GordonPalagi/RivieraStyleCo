@@ -49,4 +49,9 @@
     opacity: 1;
   }
 
+  .sidebar-link {
+    display: flex;
+    padding: 5px;
+  }
+
   

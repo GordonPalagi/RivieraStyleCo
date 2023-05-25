@@ -41,8 +41,13 @@
 .big-picture {
     height: var(--photoSize-800);
     padding: 0px 1px;
-    /* width: 100%; */
     object-fit: cover;
+    cursor: zoom-in;
+}
+
+.plus {
+    scale: 1.5;
+    cursor: zoom-out;
 }
 
 .side-picture-con {
@@ -62,4 +67,8 @@
 .size-con {
     display: flex;
     justify-content: flex-start;
+}
+
+.image-wrapper {
+    overflow: hidden;
 }

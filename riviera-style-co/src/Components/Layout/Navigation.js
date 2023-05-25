@@ -3,7 +3,7 @@ import '../CSS/Layout/NavCss.css';
 import BannerData from '../Data/BannerData.js';
 import wheel from '../Images/wheel.png';
 import NavDropdown from '../Models/NavDropdown';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useCallback, useState } from 'react';
 
 
@@ -51,14 +51,13 @@ function Navigation() {
 
             {BannerData.map((item, index) => {
               return (
-                <div
+                <Link
                   key={index}
                   onMouseOver={() => handleMouseOver(index)}
-                  onClick={() => navigate("/shopping")}
-                  className='item'
+                  className='item Link'
                 >
                   {item.title}
-                </div>
+                </Link>
               )
             })}
             
