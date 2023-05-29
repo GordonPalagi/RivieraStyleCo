@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ScrollToTopOnRefresh } from './ScrollToTopOnRefresh';
 import About from './Components/Pages/About';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -21,11 +20,6 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>
-
-
-
-    // <IntersectionObserverTest/>
-
   )
 }
 

@@ -6,63 +6,18 @@
 .upper-hero {
     display: flex;
     transform: translateX(-3%);
-    opacity: .2;
+    opacity: 0;
     transition: .5s ease-in-out;
+    height: var(--photoSize-800);
 }
 
 .lower-hero {
     display: flex;
     flex-direction: row-reverse;
     transform: translate(3%);
-    opacity: .2;
+    opacity: 0;
     transition: .5s ease-in-out;
-}
-
-.inner-hero-con > h1 {
-    font-weight: 400;
-    font-size: var(--fs-xl);
-}
-
-.titleStyle {
-    font-style: italic;
-}
-
-
-.subheader {
-    font-style: italic;
-    width: 70%;
-    color: var(--clr-neutral-400);
-    font-weight: 200;
-    line-break: strict;
-    font-size: var(--fs-l);
-    padding-bottom: 7px;
-}
-
-.inner-hero-con {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px auto;
-    font-family: 'Raleway', sans-serif;
-    font-size: var(--fs-600);
-    padding: 0px 30px;
-}
-
-.groupPhoto {
     height: var(--photoSize-800);
-    width: auto;
-    display: inline-block;
-}
-
-.bannerLinks {
-    padding: 15px 0px;
-    /* color: grey; */
-    transition: .2s ease-in-out;
-    font-size: var(--fs-600);
-}
-
-.bannerLinks:hover {
-    color: var(--clr-hover-400);
 }
 
 .most-wanted {
@@ -92,5 +47,52 @@
     justify-content: center;
     font-family: var(--fonfam-highlight);
     font-size: var(--fs-l);
-
 }
+
+@media screen and (max-width: 390px) {
+    .upper-hero {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 120px;
+    }
+
+    .lower-hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .most-wanted-slimCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tailored-slimCard {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .most-wanted-slimCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .upper-hero {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 120px;
+    }
+
+    .lower-hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .most-wanted-slimCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

@@ -2,27 +2,36 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: var(--fonfam-highlight);
+    font-size: var(--fs-l);
     object-fit: cover;
-    cursor: pointer;
 }
 
-.threeCardSlim {
-    display: flex;
-    justify-content: center;
-    height: var(--photoSize-800);
-    text-align: center;
-    cursor: pointer;
-}
-
-.card-con {
+.most-wanted-card-con {
     padding: 2px;
+}
+
+.tailored-card-con {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 .slimCard-photo {
     display: flex;
     height: var(--photoSize-500);
     object-fit: cover;
+}
+
+.tailored-photo {
+    max-height: 100%;
+    width: var(--photoSize-400);
+    height: 100%;
     cursor: pointer;
+}
+
+.slimCard-photo > span {
+    font-size: var(--fs-600);
 }
 
 .card-con:hover {
@@ -30,8 +39,53 @@
 }
 
 .slimCard-details {
+    font-size: var(--fs-600);
+    font-family: var(--fonfam-base);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+@media screen and (max-width: 390px) {
+
+    .slimCard-photo {
+        max-height: 100%;
+        width: var(--photoSize-500);
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .tailored-photo {
+        max-height: 100%;
+        width: var(--photoSize-800);
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .tailored-card-con {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-height: 100%;
+        width: var(--photoSize-800);
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .most-wanted-card-con {
+        margin: 0 auto;
+        padding: 10px;
+        height: var(--photoSize-600);
+    }
+
+    .slimCard-photo {
+        max-height: 100%;
+        width: var(--photoSize-500);
+        height: 100%;
+        cursor: pointer;
+    }
+
 }

@@ -20,8 +20,8 @@ function Home() {
   const lowerRef = useRef(null);
   const isIntersecting = useIntersection(ref, {rootMargin: "-150px"})
   const isLowerIntersecting = useIntersection(lowerRef, {rootMargin: "-150px"})
-  const title = <div>Newest <span className='titleStyle'>Fashion</span></div>
-  const title2 = <div>Hottest <span className='titleStyle'>Trends</span></div>
+  const title = <div>Newest <span><em>Fashion</em></span></div>
+  const title2 = <div>Hottest <span><em>Trends</em></span></div>
 
   useEffect(() => {
     if(isIntersecting) {
@@ -41,7 +41,7 @@ function Home() {
 
       <div className='heroCard-con' ref={ref}>
           <HeroCard
-              className={`upper-hero ${shouldSlideIn ? 'slide-in' : ''}`} 
+              className={`upper-hero ${shouldSlideIn ? 'slide-in' : ''}`}
               title={title} 
               array={RightArrowData} 
               photo={freeStock} 
@@ -61,33 +61,33 @@ function Home() {
 
         <div className='between'><span className='most-wanted'>Shop the most wanted</span></div>
         
-        <div className='most-wanted-slimCard'>
-          {ClothingData.slice(0, 4).map((item) => (
-            <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className='most-wanted-slimCard'>
+            {ClothingData.slice(0, 4).map((item) => (
+                  <LazyCardSection 
+                    props={item} 
+                    className='most-wanted-card-con' 
+                    photoSize='slimCard-photo'
+                    nav={'/shopping'}
+                    state={false}
+                    />
+            ))}
+          </div>
+          
+          <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div>
+          
+          <div className='tailored-slimCard'>
+            {ClothingData.slice(0, 3).map((item) => (
                 <LazyCardSection 
                   props={item} 
-                  className='card-con' 
-                  nav={'/shopping'}
+                  className='tailored-card-con'
+                  photoSize='tailored-photo'
+                  nav='/shopping' 
                   state={false}
                   />
-            </Suspense>
-          ))}
-        </div>
-        
-        <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div>
-        
-        <div className='tailored-slimCard'>
-          {ClothingData.slice(0, 3).map((item) => (
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyCardSection 
-                props={item} 
-                className='card-con' 
-                nav='/shopping' 
-                state={false}
-                />
-            </Suspense>
-          ))}
-        </div>
+                  ))}
+          </div>
+        </Suspense>
 
         <div className='between'>
           <span className='most-wanted'></span>
