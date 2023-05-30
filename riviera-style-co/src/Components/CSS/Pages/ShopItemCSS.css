@@ -13,7 +13,6 @@
 }
 
 .suggest-con {
-    height: var(--photoSize-800);
     overflow: hidden;
     font-family: var(--fonfam-base);
     font-size: var(--fs-l);
@@ -24,11 +23,13 @@
     display: flex;
     overflow: scroll;
     height: 100%;
+    padding: 10px;
 }
 
-.suggest-card-con {
+.suggest-card-con > img {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: var(--photoSize-400);
 }
 
 .big-picture-con {
@@ -71,4 +72,8 @@
 
 .image-wrapper {
     overflow: hidden;
+}
+
+.slimCard-photo-gallery {
+    padding: 0px 5px;
 }

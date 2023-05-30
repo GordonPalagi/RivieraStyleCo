@@ -65,12 +65,12 @@ function Home() {
           <div className='most-wanted-slimCard'>
             {ClothingData.slice(0, 4).map((item) => (
                   <LazyCardSection 
-                    props={item} 
+                    dataSource={item} 
                     className='most-wanted-card-con' 
                     photoSize='slimCard-photo'
                     nav={'/shopping'}
-                    state={false}
-                    />
+                    addButton={false}
+                  />
             ))}
           </div>
           
@@ -79,11 +79,11 @@ function Home() {
           <div className='tailored-slimCard'>
             {ClothingData.slice(0, 3).map((item) => (
                 <LazyCardSection 
-                  props={item} 
+                  dataSource={item} 
                   className='tailored-card-con'
                   photoSize='tailored-photo'
                   nav='/shopping' 
-                  state={false}
+                  addButton={false}
                   />
                   ))}
           </div>

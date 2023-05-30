@@ -27,10 +27,11 @@ function ShopItem() {
             <div className='suggest-con-inner'>
                 {ClothingData.map((item) => (
                     <SlimCard 
-                        props={item} 
-                        className={'card-con'} 
+                        dataSource={item} 
+                        className={'suggest-card-con'} 
+                        photoSize='slimCard-photo-gallery'
                         nav={'/shopping'} 
-                        state={true}
+                        addButton={true}
                     />
                 ))}
             </div>

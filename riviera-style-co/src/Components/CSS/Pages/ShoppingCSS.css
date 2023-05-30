@@ -1,8 +1,4 @@
 .shopping-con {
-    /* display: flex; */
-    /* overflow: scroll; */
-    /* justify-content: space-between; */
-    /* align-items: stretch; */
     display: flex;
     justify-content: flex-end;
 }
@@ -30,3 +26,4 @@
     padding: 20px;
     position: fixed;
 }
+
