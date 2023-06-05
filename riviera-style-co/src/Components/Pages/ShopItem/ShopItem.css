@@ -1,0 +1,115 @@
+
+.shopItem-con {
+    display: flex;
+    padding: 20px;
+    margin-top: 100px;
+    justify-content:space-between;
+}
+
+.clothing-photoGallery-con {
+    display: flex;
+}
+
+.photo-gallery-con {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.suggest-con {
+    overflow: hidden;
+    font-family: var(--fonfam-base);
+    font-size: var(--fs-l);
+    padding: 50px;
+}
+
+.suggest-con-inner {
+    display: flex;
+    overflow: scroll;
+    height: 100%;
+    padding: 10px;
+}
+
+.suggest-card-con > img {
+    display: flex;
+    flex-direction: column;
+    height: var(--photoSize-400);
+}
+
+.big-picture-con {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    
+}
+
+.big-picture {
+    height: var(--photoSize-800);
+    padding: 0px 1px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.plus {
+    scale: 1.5;
+    cursor: zoom-out;
+}
+
+.side-picture-con {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.side-images {
+    height: calc(var(--photoSize-800) / 4);
+}
+
+.size-con > span {
+    padding-right: 20px;
+}
+
+.size-con {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image-wrapper {
+    overflow: hidden;
+}
+
+.slimCard-photo-gallery {
+    padding: 0px 5px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .clothing-photoGallery-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-images {
+        padding-right: 5px;
+        height: calc(var(--photoSize-1000) / 4);
+    }
+
+    .photo-gallery-con .image-wrapper:nth-child(2) img {
+        display: none;
+    }
+
+    .big-picture {
+        height: var(--photoSize-1000);
+    }
+
+    .side-picture-con {
+        position: relative;
+        left: 50px;
+    }
+
+    .photo-gallery-con {
+        margin: 0 auto;
+    }
+
+    
+}

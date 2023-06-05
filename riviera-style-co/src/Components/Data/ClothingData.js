@@ -1,7 +1,7 @@
-import Jackets from '../Images/Jackets.avif'
-import Dresses from '../Images/Dresses.avif'
-import Sweats from '../Images/Sweats.avif'
-import Flashy from '../Images/flashy-fashion.avif'
+import Jackets from '../Assets/Jackets.avif'
+import Dresses from '../Assets/Dresses.avif'
+import Sweats from '../Assets/Sweats.avif'
+import Flashy from '../Assets/flashy-fashion.avif'
 
 export default [
     {

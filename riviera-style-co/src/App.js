@@ -1,11 +1,11 @@
 import './App.css';
-import Home from './Components/Pages/Home';
-import Layout from './Components/Layout/Layout';
-import Shopping from './Components/Pages/Shopping';
-import ShopItem from './Components/Pages/ShopItem';
+import Home from './Components/Pages/Home/Home'
+import Layout from './Components/Layout/Layout/Layout';
+import Shopping from './Components/Pages/Shopping/Shopping';
+import ShopItem from './Components/Pages/ShopItem/ShopItem';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ScrollToTopOnRefresh } from './ScrollToTopOnRefresh';
-import About from './Components/Pages/About';
+import About from './Components/Pages/About/About';
 
 function App() {
   return (

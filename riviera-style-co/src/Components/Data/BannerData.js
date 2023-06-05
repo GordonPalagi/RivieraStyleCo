@@ -1,6 +1,6 @@
-import Dresses from '../Images/Dresses.avif';
-import fallClothes from '../Images/fallClothes.avif';
-import Jackets from '../Images/Jackets.avif';
+import Dresses from '../Assets/Dresses.avif';
+import fallClothes from '../Assets/fallClothes.avif';
+import Jackets from '../Assets/Jackets.avif';
 
 
 export default 
