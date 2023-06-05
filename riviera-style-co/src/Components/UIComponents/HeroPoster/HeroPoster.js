@@ -1,7 +1,7 @@
 import React from 'react'
-import fashion from '../Images/fashion_photo.avif'
-import '../CSS/Models/HeroPosterCSS.css'
-import wheel from '../Images/wheel.webp'
+import fashion from '../../Assets/fashion_photo.avif'
+import '../HeroPoster/HeroPoster.css'
+import wheel from '../../Assets/wheel.webp'
 
 function HeroPoster({title}) {
   

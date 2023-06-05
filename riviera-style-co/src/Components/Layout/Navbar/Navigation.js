@@ -2,7 +2,7 @@ import React from 'react';
 import '../Navbar/Navigation.css'
 import BannerData from '../../Data/BannerData';
 import wheel from '../../Assets/wheel.webp'
-import NavDropdown from '../../UIComponents/NavDropdown/NavDropdown.css';
+import NavDropdown from '../../UIComponents/NavDropdown/NavDropdown';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';

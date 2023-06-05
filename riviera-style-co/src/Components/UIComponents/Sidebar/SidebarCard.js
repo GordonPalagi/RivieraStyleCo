@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SidebarData from '../../Data/SidebarData';
-import '../Sidebar/SidebarCard'
+import '../Sidebar/Sidebar.css'
 import { Link } from 'react-router-dom';
 
 function SidebarCard() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Models/HeroCardCSS.css';
+import '../HeroCard/HeroCard.css'
 import {useNavigate} from 'react-router-dom';
 
 function HeroCard({ title, array, photo, className }) {
