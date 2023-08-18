@@ -10,15 +10,15 @@ import { ScrollToTopOnRefresh } from './ScrollToTopOnRefresh';
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
         <ScrollToTopOnRefresh />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shopping" element={<Shopping />} />
-          <Route path="/shopItem" element={<ShopItem />} />
-          <Route path='/about' element={<About />} />
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/shopping" element={<Shopping />} />
+            <Route path="/shopItem" element={<ShopItem />} />
+            <Route path='/about' element={<About />} />
+          </Route >
         </Routes>
-      </Layout>
     </BrowserRouter>
   )
 }
