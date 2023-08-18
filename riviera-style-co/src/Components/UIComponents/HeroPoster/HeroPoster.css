@@ -17,6 +17,8 @@
 }
 
 .hero-img {
+    height: 95vh;
+    width: 100vw;
     z-index: 0;
     filter: blur(2px);
     filter: brightness(40%);

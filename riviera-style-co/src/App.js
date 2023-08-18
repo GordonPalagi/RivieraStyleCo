@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
         <ScrollToTopOnRefresh />
+
         <Routes>
           <Route element={<Layout/>}>
             <Route path="/" element={<Home />} />
@@ -19,6 +20,7 @@ function App() {
             <Route path='/about' element={<About />} />
           </Route >
         </Routes>
+        
     </BrowserRouter>
   )
 }

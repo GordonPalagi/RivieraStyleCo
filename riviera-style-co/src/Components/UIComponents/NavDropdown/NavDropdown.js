@@ -1,45 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../NavDropdown/NavDropdown.css'
+import { Link } from "react-router-dom";
+import "../NavDropdown/NavDropdown.css";
 
 
-
-const renderLinks = (links) => {
-
+const Links = (links) => {
   return (
-    <ul className='li-con'>
+    <ul className="li-con">
       {links.map((item, index) => (
-          <Link
-            className='Link' 
-            to={'/shopItem'} 
-            key={index}>{item}</Link>
+        <Link className="Link" to={"/shopItem"} key={index}>
+          {item}
+        </Link>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-const renderPictures = (picture) => {
+const Pictures = (picture) => {
   return (
-    <div className='banner-picture-con'>
+    <div className="banner-picture-con">
       {picture.map((item, index) => (
-            <img key={index} 
-              className='inbed-banner-img' 
-              src={item} alt="" />
+        <img key={index} className="inbed-banner-img" src={item} alt="" />
       ))}
     </div>
-  )
-}
-
+  );
+};
 
 function NavDropdown({ links, picture }) {
-    return (
-      <div className='hovered-box-con'>
+  return (
+    <div className="hovered-box-con">
+      <Links links={links}/>
+      <Pictures picture={picture}/>
+    </div>
+  );
+}
 
-        {renderLinks(links)}
-        {renderPictures(picture)}
-      
-      </div>
-    )
-  }
-
-export default NavDropdown
+export default NavDropdown;

@@ -3,7 +3,7 @@ import '../Footer/Footer.css'
 import { SiLinkedin } from 'react-icons/si'
 import { SiTwitter } from 'react-icons/si'
 import { SiGithub } from 'react-icons/si'
-import { useNavigate } from 'react-router'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 function Footer() {
@@ -19,14 +19,14 @@ const navigate = useNavigate();
             <h4 className='understated'><span>Understated.</span> <span><em>Luxury.</em></span></h4>
             <p>For the latest trends and fashion, or if you want to hire the guy who built this fake website, Contact me at gordonpalagi1@gmail.com</p>
             <div className='icon-con'>
-              <span className='icon'><SiLinkedin/></span>
-              <span className='icon'><SiTwitter/></span>
-              <span className='icon'><SiGithub/></span>
+              <Link to="" className='icon'><SiLinkedin/></Link>
+              <Link to="" className='icon'><SiTwitter/></Link>
+              <Link to="" className='icon'><SiGithub/></Link>
             </div>
         </div>
 
         <ul className='list'>
-          <li onClick={() => navigate('/about')} className='Link'>About Us</li>
+          <Link to='/about' className='Link'>About Us</Link>
           <li className='Link'>Contact Us</li>
           <li className='Link'>Shipping & Returns</li>
           <li className='Link'>Privacy Policy</li>

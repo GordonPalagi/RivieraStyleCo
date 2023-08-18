@@ -1,16 +1,16 @@
 import React from 'react';
 import '../HeroCard/HeroCard.css'
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link } from 'react-router-dom';
 
 function HeroCard({ title, array, photo, className }) {
 
-  const renderSubHeader = () => {
+  const RenderSubHeader = () => {
     return array.map((item, index) => (
       <div className='subheader' key={index}>{item.sub}</div>
     ))
   }
 
-  const renderLinks = () => {
+  const RenderLinks = () => {
     return array.map((item, index) => (
       <li 
         onClick={() => navigate("/shopping")}
@@ -28,8 +28,8 @@ function HeroCard({ title, array, photo, className }) {
       <div className={className}>
         <div className='inner-hero-con'>
           <h1>{title}</h1>
-          {renderSubHeader()}
-          {renderLinks()}
+          <RenderSubHeader/>
+          <RenderLinks/>
         </div>
         <img className='groupPhoto' src={photo} alt="" />
       </div>

@@ -9,7 +9,7 @@ import HeroPoster from '../../UIComponents/HeroPoster/HeroPoster'
 import { useState, useEffect, useRef } from 'react'
 import { useIntersection } from '../../CustomHooks/useIntersection'
 import ClothingData from '../../Data/ClothingData'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useContext } from 'react'
 
 const LazyCardSection = lazy(() => import('../../UIComponents/SlimCard/SlimCard'));
 
@@ -22,6 +22,11 @@ function Home() {
   const isLowerIntersecting = useIntersection(lowerRef, {rootMargin: "-150px"})
   const title = <div>Newest <span><em>Fashion</em></span></div>
   const title2 = <div>Hottest <span><em>Trends</em></span></div>
+
+
+  
+
+
 
   useEffect(() => {
     if(isIntersecting) {
