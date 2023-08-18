@@ -3,7 +3,7 @@ import Navigation from '../Navbar/Navigation'
 import Footer from '../Footer/Footer'
 import { Outlet } from 'react-router'
 
-function Layout({children}) {
+function Layout() {
   return (
     <>
         <Navigation/>

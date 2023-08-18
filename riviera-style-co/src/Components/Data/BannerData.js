@@ -43,7 +43,6 @@ export default
   },
 ];
 
-
 // import Dresses from '../Images/Dresses.avif';
 // import fallClothes from '../Images/fallClothes.avif';
 // import Jackets from '../Images/Jackets.avif';

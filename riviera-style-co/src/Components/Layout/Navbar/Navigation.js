@@ -12,10 +12,6 @@ function Navigation() {
 
     const [hoveredLink, setHoveredLink] = useState(null);
     const [companyName, setCompanyName] = useState("Riviera Style Co.");
-    // const [prevScrollPos, setPrevScrollPos] = useState(0);
-    // const [visible, setVisible] = useState(true);
-    const pageYOffsetLower = 100;
-    const pageYOffsetUpper = 150;
     
     const handleMouseOver = (index) => {
       setHoveredLink(index);
@@ -40,9 +36,6 @@ function Navigation() {
       window.addEventListener('resize', handleWindowResize);
 
     }, [companyName])
-    
-    
-
 
     // const handleScroll = useCallback(() => {
     //   const currentScrollPos = window.pageYOffset;
@@ -75,9 +68,7 @@ function Navigation() {
                   key={index}
                   onMouseOver={() => handleMouseOver(index)}
                   className='item Link'>
-
                   {item.title}
-                  
                 </Link>
               )
             })}
