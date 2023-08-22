@@ -9,7 +9,7 @@ import HeroPoster from '../../UIComponents/HeroPoster/HeroPoster'
 import { useState, useEffect, useRef } from 'react'
 import { useIntersection } from '../../CustomHooks/useIntersection'
 import ClothingData from '../../Data/ClothingData'
-import { lazy, Suspense, useContext } from 'react'
+import { lazy, Suspense } from 'react'
 
 const LazyCardSection = lazy(() => import('../../UIComponents/SlimCard/SlimCard'));
 

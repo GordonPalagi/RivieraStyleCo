@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../NavDropdown/NavDropdown.css";
 
 
-const Links = (links) => {
+const Links = ({links}) => {
   return (
     <ul className="li-con">
       {links.map((item, index) => (
@@ -14,7 +14,7 @@ const Links = (links) => {
   );
 };
 
-const Pictures = (picture) => {
+const Pictures = ({picture}) => {
   return (
     <div className="banner-picture-con">
       {picture.map((item, index) => (

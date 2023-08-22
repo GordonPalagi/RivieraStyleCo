@@ -6,6 +6,10 @@
     font-size: var(--fs-l);
     padding: 0;
     margin: 0;
+    width: 15vw;
+    position: fixed;
+    right: 0px;
+    top: 60px;
   }
   
   .sidebar-ul-con > li {

@@ -3,7 +3,7 @@ import '../Navbar/Navigation.css'
 import BannerData from '../../Data/BannerData';
 import wheel from '../../Assets/wheel.webp'
 import NavDropdown from '../../UIComponents/NavDropdown/NavDropdown';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -19,7 +19,6 @@ function Navigation() {
     const handleMouseLeave = () => {
       setHoveredLink(null);
     }
-    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -57,19 +56,21 @@ function Navigation() {
           <nav  
             className="banner-con">
             
-            <div onClick={() => navigate("/")} className='title-con'>
-              <div className="title">{title}</div>
-              <img className='title-wheel' src={wheel} alt="" />
-            </div>
+            <Link to={"/"}>
+              <div className='title-con'>
+                <div className="title">{title}</div>
+                <img className='title-wheel' src={wheel} alt="" />
+              </div>
+            </Link>
 
             {BannerData.map((item, index) => {
               return (
-                <Link
+                <NavLink
                   key={index}
                   onMouseOver={() => handleMouseOver(index)}
-                  className='item Link'>
+                  className='item Nav'>
                   {item.title}
-                </Link>
+                </NavLink>
               )
             })}
             
