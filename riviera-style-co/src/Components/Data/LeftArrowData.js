@@ -1,7 +1,7 @@
 import { BsArrowLeft } from 'react-icons/bs'
 
-export default
 
+const leftArrowData = 
 [
     {
         item2: "Fall Fashion", 
@@ -18,3 +18,4 @@ export default
     },
         
 ]
+export default leftArrowData

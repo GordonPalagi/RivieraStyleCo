@@ -2,8 +2,9 @@ import beauty from '../Images/beautyAndBrains.avif'
 import flashy from '../Images/flashy-fashion.avif'
 import dressy from '../Images/dressyFashion.avif'
 
-export default
 
+
+const blockCardData = 
 [
     {
         photo: beauty,
@@ -18,3 +19,6 @@ export default
         catagorie: "Nightlife"
     }
 ]
+
+export default blockCardData
+

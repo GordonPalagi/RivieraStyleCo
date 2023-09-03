@@ -3,13 +3,10 @@ import '../Footer/Footer.css'
 import { SiLinkedin } from 'react-icons/si'
 import { SiTwitter } from 'react-icons/si'
 import { SiGithub } from 'react-icons/si'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
-const navigate = useNavigate();
-
-
 
   return (
     <div className='footer-con'>

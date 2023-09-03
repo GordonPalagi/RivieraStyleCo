@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../NavDropdown/NavDropdown.css";
+import "./NavDropdown.css";
 
 
 const Links = ({links}) => {

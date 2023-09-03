@@ -3,7 +3,9 @@ import Dresses from '../Assets/Dresses.avif'
 import Sweats from '../Assets/Sweats.avif'
 import Flashy from '../Assets/flashy-fashion.avif'
 
-export default [
+
+const clothingData = 
+[
     {
         id: 1,
         image: Jackets,
@@ -333,3 +335,10 @@ export default [
         size: ["US 6", "US 7", "US 8", "US 9"]
     }
   ]
+
+
+
+
+
+
+export default clothingData

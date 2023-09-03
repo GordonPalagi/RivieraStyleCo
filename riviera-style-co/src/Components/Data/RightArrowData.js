@@ -1,6 +1,6 @@
 import { BsArrowRight } from 'react-icons/bs'
 
-export default
+const rightArrowData = 
 [
   {
     item1: "Mens Fashion",
@@ -16,3 +16,5 @@ export default
     item2: <BsArrowRight/>
   }
 ]
+
+export default rightArrowData

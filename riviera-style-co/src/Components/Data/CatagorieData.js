@@ -3,7 +3,8 @@ import Jackets from '../Images/Jackets.avif'
 import Sweats from '../Images/Sweats.avif'
 import OuterWear from '../Images/OuterWear.avif'
 
-export default
+
+const catagorieData =
 [
     {
         catagorie: "Dresses",
@@ -38,3 +39,6 @@ export default
         photo: OuterWear
     }
 ]
+
+
+export default catagorieData

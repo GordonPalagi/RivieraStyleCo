@@ -12,13 +12,13 @@ export const useIntersection = (rootRef, options) => {
     if (rootRef.current) {
       observer.observe(rootRef.current);
     }
-
+  const currentRoot = rootRef.current
     return () => {
-      if (rootRef.current) {
-        observer.unobserve(rootRef.current);
+      if (currentRoot) {
+        observer.unobserve(currentRoot);
       }
     };
-  }, [currentRef, options]);
+  }, [currentRef, options, rootRef]);
   console.log(isIntersecting);
   return isIntersecting;
 };

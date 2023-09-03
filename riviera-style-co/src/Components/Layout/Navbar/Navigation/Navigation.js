@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Navbar/Navigation.css'
-import BannerData from '../../Data/BannerData';
-import wheel from '../../Assets/wheel.webp'
-import NavDropdown from '../../UIComponents/NavDropdown/NavDropdown';
+import '../Navigation/Navigation.css'
+import BannerData from '../../../Data/BannerData';
+import wheel from '../../../Assets/wheel.webp'
+import NavDropdown from '../NavDropdown/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';

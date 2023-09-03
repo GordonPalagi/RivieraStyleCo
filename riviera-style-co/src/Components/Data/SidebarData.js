@@ -1,4 +1,6 @@
-export default
+
+
+const sidebarData = 
 [
     {
         id: 1,   
@@ -26,3 +28,5 @@ export default
         subLinks: ["Jewelery", "Bracelets", "Necklaces", "Rings"]
     }
 ]
+
+export default sidebarData
