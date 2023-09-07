@@ -53,7 +53,7 @@ function Home() {
               />
         </div>
 
-        <div className='between'></div>
+        {/* <div className='between'></div> */}
 
         <div ref={lowerRef}>
           <HeroCard
@@ -64,12 +64,13 @@ function Home() {
               />
         </div>
 
-        <div className='between'><span className='most-wanted'>Shop the most wanted</span></div>
+        {/* <div className='between'><span className='most-zwanted'>Shop the most wanted</span></div> */}
         
         <Suspense fallback={<div>Loading...</div>}>
           <div className='most-wanted-slimCard'>
-            {ClothingData.slice(0, 4).map((item) => (
+            {ClothingData.slice(0, 4).map((item, i) => (
                   <LazyCardSection 
+                    key={i}
                     dataSource={item} 
                     className='most-wanted-card-con' 
                     photoSize='slimCard-photo'
@@ -79,11 +80,12 @@ function Home() {
             ))}
           </div>
           
-          <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div>
+          {/* <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div> */}
           
           <div className='tailored-slimCard'>
-            {ClothingData.slice(0, 3).map((item) => (
+            {ClothingData.slice(0, 3).map((item, i) => (
                 <LazyCardSection 
+                  key={i}
                   dataSource={item} 
                   className='tailored-card-con'
                   photoSize='tailored-photo'
@@ -94,9 +96,9 @@ function Home() {
           </div>
         </Suspense>
 
-        <div className='between'>
+        {/* <div className='between'> */}
           <span className='most-wanted'></span>
-        </div>
+        {/* </div> */}
 
     </>
   )

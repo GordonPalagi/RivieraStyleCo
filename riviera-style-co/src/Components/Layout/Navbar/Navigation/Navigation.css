@@ -1,25 +1,18 @@
 
 .banner-con {
     display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 10px;
-    height: 5vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: white;
-    z-index: 4;
     top: 0px;
+    width: 100%;
+    height: 70px;
+    z-index: 4;
+    font-family: var(--fonfam-base);
+    text-decoration: none;
+    box-shadow: 0 0 25px 30px rgba(27,27,26,0.420899854862119);
+    background: linear-gradient(0deg, rgba(27,27,26,0.420899854862119) 50%, rgba(0,0,0) 100%);
 }
-
-.title-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 2;
-}
-
 
 .title {
     display: flex;
@@ -28,20 +21,61 @@
     font-family: 'Raleway', sans-serif;
     font-size: x-large;
     cursor: pointer;
-    
-}
-
-.title-wheel {
-    height: var(--photoSize-200);
-    
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
 }
 
 .item {
+    color: white;
+    text-decoration: none;
     font-weight: 700;
     font-size: var(--fs-400);
-    flex-grow: 1;
+    padding: 0px 15px;
 }
 
 .item:hover {
     color: rgb(240, 205, 161);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 566px) {
+    .banner-con {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: space-evenly;
+        height: 100px;
+        width: 100%;
+        box-shadow: 0 0 20px 15px rgba(27,27,26,0.420899854862119);
+    }
+
+    .no-title-banner {
+        display: flex;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0 0 5px 5px rgba(27,27,26,0.420899854862119);
+        background: linear-gradient(0deg, rgba(27,27,26,0.420899854862119) 50%, rgba(0,0,0) 100%);
+        z-index: 4;
+        top: 0px;
+    }
+
+    .item {
+        padding: 0px 6px;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .item {
+        font-size: var(--fs-800);
+    }
+
+    .title {
+        font-size: var(--fs-l);
+    }
 }
