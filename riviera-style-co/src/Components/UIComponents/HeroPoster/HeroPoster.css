@@ -20,7 +20,8 @@
 
 .hero-img {
     height: 100%;
-    width: 100%;
+    width: 100vw;
+    object-fit: cover;
     z-index: 0;
     filter: blur(2px);
     filter: brightness(40%);
@@ -47,7 +48,8 @@
 
     .hero-img {
         height: 100%;
-        width: fit-content;
+        width: 100vw;
+        object-fit: cover;
     }
 
 
@@ -66,7 +68,8 @@
 
     .hero-img {
         height: 100%;
-        width: fit-content;
+        width: 100vw;
+        object-fit: cover;
     }
 
 
