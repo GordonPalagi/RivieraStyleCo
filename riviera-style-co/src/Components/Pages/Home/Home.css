@@ -17,7 +17,7 @@
     transform: translate(3%);
     opacity: 0;
     transition: .5s ease-in-out;
-    height: var(--photoSize-800);
+    /* height: var(--photoSize-800); */
 }
 
 .most-wanted {
@@ -47,52 +47,5 @@
     justify-content: center;
     font-family: var(--fonfam-highlight);
     font-size: var(--fs-l);
-}
-
-@media screen and (max-width: 390px) {
-    .upper-hero {
-        display: flex;
-        flex-direction: column-reverse;
-        padding-top: 120px;
-    }
-
-    .lower-hero {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .most-wanted-slimCard {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tailored-slimCard {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .most-wanted-slimCard {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .upper-hero {
-        display: flex;
-        flex-direction: column-reverse;
-        padding-top: 120px;
-    }
-
-    .lower-hero {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .most-wanted-slimCard {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 

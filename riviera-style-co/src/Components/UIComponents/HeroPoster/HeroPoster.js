@@ -2,6 +2,7 @@ import React from 'react'
 import fashion from '../../Assets/fashion_photo.avif'
 import '../HeroPoster/HeroPoster.css'
 import wheel from '../../Assets/wheel.webp'
+import '../../mediaQuery.css'
 
 function HeroPoster({title}) {
   

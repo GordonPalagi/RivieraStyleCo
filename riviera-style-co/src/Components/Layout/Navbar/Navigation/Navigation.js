@@ -5,6 +5,7 @@ import NavDropdown from '../NavDropdown/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import '../../../mediaQuery.css'
 
 
 function Navigation() {

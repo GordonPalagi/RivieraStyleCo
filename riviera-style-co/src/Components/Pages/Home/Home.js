@@ -44,16 +44,18 @@ function Home() {
     <>
       <HeroPoster title={"Riviera Style Co."}/>
 
-      <div className='heroCard-con' ref={ref}>
+    <div className='heroCard-con'>
+
+      <div ref={ref}>
           <HeroCard
               className={`upper-hero ${shouldSlideIn ? 'slide-in' : ''}`}
               title={title} 
               array={RightArrowData} 
               photo={freeStock} 
               />
-        </div>
+      </div>
 
-        {/* <div className='between'></div> */}
+
 
         <div ref={lowerRef}>
           <HeroCard
@@ -63,6 +65,8 @@ function Home() {
               photo={fallClothes} 
               />
         </div>
+
+    </div>
 
         {/* <div className='between'><span className='most-zwanted'>Shop the most wanted</span></div> */}
         
@@ -80,9 +84,8 @@ function Home() {
             ))}
           </div>
           
-          {/* <div className='between'><span className='most-wanted'>Tailored with you in mind</span></div> */}
           
-          <div className='tailored-slimCard'>
+          {/* <div className='tailored-slimCard'>
             {ClothingData.slice(0, 3).map((item, i) => (
                 <LazyCardSection 
                   key={i}
@@ -93,11 +96,11 @@ function Home() {
                   addButton={false}
                   />
                   ))}
-          </div>
+          </div> */}
         </Suspense>
 
         {/* <div className='between'> */}
-          <span className='most-wanted'></span>
+          {/* <span className='most-wanted'></span> */}
         {/* </div> */}
 
     </>

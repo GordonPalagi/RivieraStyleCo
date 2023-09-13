@@ -5,6 +5,7 @@
 :root {
   --photoSize-1000: 50vmax;
   --photoSize-800: 40vmax;
+  --photoSize-600: 35vmax;
   --photoSize-500: 30vmax;
   --photoSize-400: 20vmax;
   --photoSize-300: 10vmax;
