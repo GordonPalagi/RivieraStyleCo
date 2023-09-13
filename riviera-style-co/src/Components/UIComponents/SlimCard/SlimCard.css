@@ -47,9 +47,9 @@
     padding: 10px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
 
-    .slimCard-photo {
+    /* .slimCard-photo {
         max-height: 100%;
         width: var(--photoSize-500);
         height: 100%;
@@ -71,21 +71,104 @@
         width: var(--photoSize-800);
         height: 100%;
         cursor: pointer;
-    }
-}
+    } */
 
-@media screen and (max-width: 480px) {
-    .most-wanted-card-con {
-        margin: 0 auto;
-        padding: 10px;
-        height: var(--photoSize-600);
+    .most-wanted {
+        font-size: var(--fs-ml);
+    }
+
+    span {
+        padding-left: 10px;
     }
 
     .slimCard-photo {
+        height: 14em;
+        width: 9em;
+        object-fit: cover;
+    }
+
+    .most-wanted-slimCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tailored-slimCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tailored-photo {
+        height: 14em;
+        width: 9em;
+        object-fit: cover;
+    }
+
+    
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    /* .slimCard-photo {
         max-height: 100%;
         width: var(--photoSize-500);
         height: 100%;
         cursor: pointer;
     }
 
+    .tailored-photo {
+        max-height: 100%;
+        width: var(--photoSize-800);
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .tailored-card-con {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-height: 100%;
+        width: var(--photoSize-800);
+        height: 100%;
+        cursor: pointer;
+    } */
+
+    .most-wanted {
+        font-size: var(--fs-ml);
+    }
+
+    span {
+        padding-left: 10px;
+    }
+
+    .slimCard-photo {
+        height: 15em;
+        width: 9em;
+        object-fit: cover;
+    }
+
+    .most-wanted-slimCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tailored-slimCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tailored-photo {
+        height: 15em;
+        width: 9em;
+        object-fit: cover;
+    }
+
+    
 }

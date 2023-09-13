@@ -68,7 +68,7 @@ function Home() {
 
     </div>
 
-        {/* <div className='between'><span className='most-zwanted'>Shop the most wanted</span></div> */}
+        <div className='between'><span className='most-wanted'>Shop the most wanted</span></div>
         
         <Suspense fallback={<div>Loading...</div>}>
           <div className='most-wanted-slimCard'>
@@ -84,8 +84,9 @@ function Home() {
             ))}
           </div>
           
+          <div className='between'><span className='most-wanted'>What you want, when you want it</span></div>
           
-          {/* <div className='tailored-slimCard'>
+          <div className='tailored-slimCard'>
             {ClothingData.slice(0, 3).map((item, i) => (
                 <LazyCardSection 
                   key={i}
@@ -96,7 +97,7 @@ function Home() {
                   addButton={false}
                   />
                   ))}
-          </div> */}
+          </div>
         </Suspense>
 
         {/* <div className='between'> */}
