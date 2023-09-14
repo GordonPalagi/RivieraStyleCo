@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../HeroCard/HeroCard.css";
 import "../../mediaQuery.css";
 import { useNavigate } from "react-router-dom";
+import { motion, useAnimation } from 'framer-motion';
 
 function HeroCard({ title, array, photo, className }) {
   const [mobileScreen, setMobileScreen] = useState(true);
+  const controls = useAnimation(); // Create animation controls
+
+
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
@@ -60,9 +64,13 @@ function HeroCard({ title, array, photo, className }) {
         </div>
         <img className="groupPhoto" src={photo} alt="" />
       </div>
-      <div className="mobile-sublinks">
-        <RenderSubHeader/>
-      </div>
+        <motion.div
+          className="mobile-sublinks"
+          initial={{ x: '100%'}}
+          animate={controls}
+        >
+          <RenderSubHeader/>
+        </motion.div>
     </>
   );
 }

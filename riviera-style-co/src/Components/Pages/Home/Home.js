@@ -24,9 +24,6 @@ function Home() {
   const title2 = <div>Hottest <span><em>Trends</em></span></div>
 
 
-  
-
-
 
   useEffect(() => {
     if(isIntersecting) {
@@ -73,7 +70,7 @@ function Home() {
         <Suspense fallback={<div>Loading...</div>}>
           <div className='most-wanted-slimCard'>
             {ClothingData.slice(0, 4).map((item, i) => (
-                  <LazyCardSection 
+              <LazyCardSection 
                     key={i}
                     dataSource={item} 
                     className='most-wanted-card-con' 
