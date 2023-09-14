@@ -10,6 +10,8 @@
 }
 
 .subheader {
+    display: flex;
+    justify-content: center;
     font-style: italic;
     color: var(--clr-neutral-400);
     font-weight: 200;
@@ -22,18 +24,21 @@
     flex-direction: column;
     gap: 4em;
     padding: 40px 0px;
+    transition: .2s ease-in-out;
 }
 
 .upper-hero{
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
+    transition: .2s ease-in-out;
 }
 
 .lower-hero {
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
+    transition: .2s ease-in-out;
 }
 
 .inner-hero-con {
@@ -55,7 +60,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
     }
 
     .lower-hero {
@@ -65,7 +69,14 @@
     }
 
     .groupPhoto {
-        height: 30vh;
+        height: 50%;
+        width: 50%;
+    }
+
+    .mobile-h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .mobile-h1 > h1 {
@@ -87,6 +98,13 @@
 
     }
 
+    .mobile-h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
     .lower-hero {
         display: flex;
         flex-direction: row-reverse;
@@ -95,7 +113,8 @@
     }
 
     .groupPhoto {
-        height: 60vh;
+        height: 50%;
+        width: 50%;
     }
 
     .mobile-h1 > h1 {
