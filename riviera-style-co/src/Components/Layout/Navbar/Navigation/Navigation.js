@@ -42,9 +42,9 @@ function Navigation() {
 
     const Banner = ({title}) => {
       return (
-        <nav className={title == "" ? "no-title-banner" : "banner-con"}>
+        <nav className={title === "" ? "no-title-banner" : "banner-con"}>
 
-          {title != "" ? (
+          {title !== "" ? (
             <Link to={"/"}>
               <div className="title">{title}</div>
             </Link>

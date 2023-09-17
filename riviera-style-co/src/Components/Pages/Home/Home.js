@@ -12,8 +12,7 @@ import HeroPoster from '../../UIComponents/HeroPoster/HeroPoster'
 import { useState, useEffect, useRef } from 'react'
 import { useIntersection } from '../../CustomHooks/useIntersection'
 import ClothingData from '../../Data/ClothingData'
-import { lazy, Suspense } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { lazy, Suspense, useMemo } from 'react'
 const LazyCardSection = lazy(() => import('../../UIComponents/SlimCard/SlimCard'));
 
 function Home() {
@@ -28,7 +27,7 @@ function Home() {
   const [photo1, setPhoto1] = useState(freeStock);
   const [photo2, setPhoto2] = useState(fallClothes);
 
-  const photoArr = [fallClothes, freeStock, beautyAndBrains, dressyFashion, outerWear]
+  const photoArr = useMemo(() => [fallClothes, freeStock, beautyAndBrains, dressyFashion, outerWear], []);
 
   useEffect(() => {
     const randomArr = Math.floor(Math.random() * photoArr.length);
